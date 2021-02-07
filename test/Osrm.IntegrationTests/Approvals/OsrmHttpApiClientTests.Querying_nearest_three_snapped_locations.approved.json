@@ -1,0 +1,45 @@
+﻿{
+    "waypoints": [
+        {
+            "nodes": [
+                2264199819,
+                0
+            ],
+            "name": "Friedrichstra\u00DFe",
+            "location": [
+                13.388798,
+                52.517033
+            ],
+            "distance": 4.231666,
+            "hint": "qqDXAYYvApMYAAAAJgAAAAAAAAAAAAAASjFaQU1xpUEAAAAAAAAAAAwAAAATAAAAAAAAAAAAAADXFgEA_kvMAKlYIQM8TMwArVghAwAA7wp2gVsJ"
+        },
+        {
+            "nodes": [
+                0,
+                21487242
+            ],
+            "name": "Friedrichstra\u00DFe",
+            "location": [
+                13.388779,
+                52.517155
+            ],
+            "distance": 14.235305,
+            "hint": "rKDXgW-h1wEAAAAADwAAAAAAAACXAAAAAAAAAAgwH0EAAAAAEgyvQgAAAAAPAAAAAAAAAJcAAADXFgEA60vMACNZIQM8TMwArVghAwAALxZ2gVsJ"
+        },
+        {
+            "nodes": [
+                6583929465,
+                6583929462
+            ],
+            "name": "Friedrichstra\u00DFe",
+            "location": [
+                13.388827,
+                52.516848
+            ],
+            "distance": 21.150482,
+            "hint": "Zy8Ck4gvAhMMAAAAAAAAAEoAAAAAAAAAfuZNQQAAAAA7Tm9CAAAAAAwAAAAAAAAASgAAAAAAAADXFgEAG0zMAPBXIQM8TMwArVghAwQAHxZ2gVsJ"
+        }
+    ],
+    "code": "Ok",
+    "message": null
+}

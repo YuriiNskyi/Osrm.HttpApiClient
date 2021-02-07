@@ -1,0 +1,236 @@
+﻿{
+    "waypoints": [
+        {
+            "trips_index": 0,
+            "waypoint_index": 0,
+            "nodes": [],
+            "name": "Friedrichstra\u00DFe",
+            "location": [
+                13.388798,
+                52.517033
+            ],
+            "distance": 4.231666,
+            "hint": "qqDXgYYvApMYAAAAJgAAAAAAAAAAAAAASjFaQU1xpUEAAAAAAAAAAAwAAAATAAAAAAAAAAAAAADXFgEA_kvMAKlYIQM8TMwArVghAwAA7wp2gVsJ"
+        },
+        {
+            "trips_index": 0,
+            "waypoint_index": 2,
+            "nodes": [],
+            "name": "Torstra\u00DFe",
+            "location": [
+                13.397631,
+                52.529432
+            ],
+            "distance": 2.789393,
+            "hint": "IkJKgCy_9JIGAAAACgAAAAAAAAB2AAAAW7-PQOKcyEAAAAAApq6DQgYAAAAKAAAAAAAAAHYAAADXFgEAf27MABiJIQOCbswA_4ghAwAAXwV2gVsJ"
+        },
+        {
+            "trips_index": 0,
+            "waypoint_index": 1,
+            "nodes": [],
+            "name": "Platz der Vereinten Nationen",
+            "location": [
+                13.428554,
+                52.523239
+            ],
+            "distance": 2.226595,
+            "hint": "JUJKgP___38fAAAAUQAAACYAAAAeAAAAsowKQkpQX0Lx6yZCvsQGQh8AAABRAAAAJgAAAB4AAADXFgEASufMAOdwIQNL58wA03AhAwMAvxB2gVsJ"
+        }
+    ],
+    "trips": [
+        {
+            "distance": 8703.4,
+            "duration": 1056.1,
+            "geometry": {
+                "coordinates": [
+                    [
+                        13.388798,
+                        52.517033
+                    ],
+                    [
+                        13.388827,
+                        52.51685
+                    ],
+                    [
+                        13.398925,
+                        52.517612
+                    ],
+                    [
+                        13.400346,
+                        52.51798
+                    ],
+                    [
+                        13.402106,
+                        52.518642
+                    ],
+                    [
+                        13.40376,
+                        52.51937
+                    ],
+                    [
+                        13.409996,
+                        52.52254
+                    ],
+                    [
+                        13.4119,
+                        52.523712
+                    ],
+                    [
+                        13.415657,
+                        52.52677
+                    ],
+                    [
+                        13.417166,
+                        52.528458
+                    ],
+                    [
+                        13.421483,
+                        52.528717
+                    ],
+                    [
+                        13.424085,
+                        52.528084
+                    ],
+                    [
+                        13.424993,
+                        52.52807
+                    ],
+                    [
+                        13.425184,
+                        52.527885
+                    ],
+                    [
+                        13.427263,
+                        52.527042
+                    ],
+                    [
+                        13.430227,
+                        52.525196
+                    ],
+                    [
+                        13.430405,
+                        52.524963
+                    ],
+                    [
+                        13.429678,
+                        52.52327
+                    ],
+                    [
+                        13.428554,
+                        52.52324
+                    ],
+                    [
+                        13.426375,
+                        52.5232
+                    ],
+                    [
+                        13.425475,
+                        52.52334
+                    ],
+                    [
+                        13.429315,
+                        52.525738
+                    ],
+                    [
+                        13.427263,
+                        52.527042
+                    ],
+                    [
+                        13.425184,
+                        52.527885
+                    ],
+                    [
+                        13.424945,
+                        52.528164
+                    ],
+                    [
+                        13.424337,
+                        52.528156
+                    ],
+                    [
+                        13.421348,
+                        52.52873
+                    ],
+                    [
+                        13.41749,
+                        52.52846
+                    ],
+                    [
+                        13.416966,
+                        52.528553
+                    ],
+                    [
+                        13.415682,
+                        52.527176
+                    ],
+                    [
+                        13.415093,
+                        52.527443
+                    ],
+                    [
+                        13.411234,
+                        52.52855
+                    ],
+                    [
+                        13.403812,
+                        52.529858
+                    ],
+                    [
+                        13.401707,
+                        52.529816
+                    ],
+                    [
+                        13.400834,
+                        52.529613
+                    ],
+                    [
+                        13.397631,
+                        52.52943
+                    ],
+                    [
+                        13.393668,
+                        52.528492
+                    ],
+                    [
+                        13.386982,
+                        52.527138
+                    ],
+                    [
+                        13.388798,
+                        52.517033
+                    ]
+                ]
+            },
+            "weight": 1059.2,
+            "weight_name": "routability",
+            "legs": [
+                {
+                    "distance": 3795.2,
+                    "duration": 384.5,
+                    "weight": 386.4,
+                    "summary": "",
+                    "steps": [],
+                    "annotations": null
+                },
+                {
+                    "distance": 3007.8,
+                    "duration": 413.4,
+                    "weight": 413.4,
+                    "summary": "",
+                    "steps": [],
+                    "annotations": null
+                },
+                {
+                    "distance": 1900.4,
+                    "duration": 258.2,
+                    "weight": 259.4,
+                    "summary": "",
+                    "steps": [],
+                    "annotations": null
+                }
+            ]
+        }
+    ],
+    "code": "Ok",
+    "message": null
+}

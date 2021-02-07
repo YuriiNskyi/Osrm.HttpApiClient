@@ -1,0 +1,22 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>net5.0</TargetFramework>
+    <Nullable>enable</Nullable>
+    <PackageVersion>1.0.0</PackageVersion>
+    <PackageId>Osrm.HttpApiClient</PackageId>
+    <Title>Osrm.HttpApiClient</Title>
+    <Authors>Yurii Naurynskyi</Authors>
+    <Summary>HTTP API client for OSRM server</Summary>
+    <Copyright>Copyright (c) Yurii Naurynskyi. All rights reserved.</Copyright>
+    <Description>Simple HTTP API client for OSRM server.</Description>
+    <PackageTags>C#, OSRM, REST, API, HTTP, Client</PackageTags>
+    <PackageProjectUrl>https://github.com/YuriiNskyi/Osrm.HttpApiClient</PackageProjectUrl>
+    <Version>1.0.0.0</Version>
+    <AssemblyVersion>1.0.0.0</AssemblyVersion>
+    <FileVersion>1.0.0.0</FileVersion>
+    <RepositoryUrl>https://github.com/YuriiNskyi/Osrm.HttpApiClient</RepositoryUrl>
+    <PackageLicenseUrl>https://github.com/YuriiNskyi/Osrm.HttpApiClient/blob/main/LICENSE</PackageLicenseUrl>
+  </PropertyGroup>
+
+</Project>
