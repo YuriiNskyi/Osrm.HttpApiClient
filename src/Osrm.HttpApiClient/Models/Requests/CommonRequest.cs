@@ -54,7 +54,7 @@ namespace Osrm.HttpApiClient
         /// Removes waypoints from the response. Waypoints are still calculated, but not serialized.
         /// Could be useful in case you are interested in some other part of response and do not want to transfer waste data.
         /// </summary>
-        public bool SkipWaypoints { get; internal set; } = false;
+        public bool SkipWaypoints { get; set; } = false;
 
         public virtual IReadOnlyCollection<RequestOption> AdditionalOptions { get; } = Array.Empty<RequestOption>();
 
