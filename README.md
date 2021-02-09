@@ -2,12 +2,14 @@
 Http API Client for OSRM library.
 
 [![NuGet](https://img.shields.io/nuget/v/Osrm.HttpApiClient.svg?style=flat)](https://www.nuget.org/packages/Osrm.HttpApiClient/)
+
 `$ dotnet add package Osrm.HttpApiClient` / `PM> Install-Package Osrm.HttpApiClient`
 
 ## Table of Contents
 
 - [Getting Started](#getting-started)
 - [Planned](#planned)
+- [Questions](#questions)
 - [License](#license)
 
 ## Getting started
@@ -137,10 +139,42 @@ Currently supported services are:
 - [Match service](http://project-osrm.org/docs/v5.23.0/api/#match-service)
 - [Trip service](http://project-osrm.org/docs/v5.23.0/api/#trip-service)
 
+Feel free to open PR's, in case something warns you or you found anything buggy here!
+
+## Questions
+
+### How can I use it with ASP.NET Core?
+
+Simply registering `OsrmHttpApiClient` in DI container:
+
+```c#
+services.AddHttpClient<OsrmHttpApiClient>(httpClient =>
+{
+    httpClient.BaseAddress = new Uri("http://router.project-osrm.org");
+});
+```
+
+### Which serialization library is using?
+
+[System.Text.Json](https://www.nuget.org/packages/System.Text.Json), which is built into `net5.0`. Simple, fast, unobtrusive.
+
+`Polyline` and `Polyline6` geometry types are supported by corresponding JSON serializers.
+
+Check `OsrmHttpApiClient.DefaultJsonSerializerOptions` field for used options.
+
+### Can I modify something in this library?
+
+Sure! 
+
+In case you want to change JSON serializer options - set them new to the `JsonSerializerOptions` property inside `OsrmHttpApiClient`.
+
+In case you want to change any model, they are all unsealed, feel free to inherit them and change whatever you want. This library was designed in mind to always keep valid state inside models, so when modifying models, it's your responsibility to keep that valid state limitations.
+
 ## Planned
 
 - Add `Tile` service.
 - Slightly refactor, extract models to separate packages.
+- Create some benchmarks.
 - Create separate, zero-alloc version of this library.
 
 ## License
