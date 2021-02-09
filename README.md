@@ -131,11 +131,11 @@ So, the best way to start building your request, is to use handy static methods 
 
 Currently supported services are:
 
-- [Nearest service](http://project-osrm.org/docs/v5.5.1/api/#nearest-service)
-- [Route service](http://project-osrm.org/docs/v5.5.1/api/#route-service)
-- [Table service](http://project-osrm.org/docs/v5.5.1/api/#table-service)
-- [Match service](http://project-osrm.org/docs/v5.5.1/api/#match-service)
-- [Trip service](http://project-osrm.org/docs/v5.5.1/api/#trip-service)
+- [Nearest service](http://project-osrm.org/docs/v5.23.0/api/#nearest-service)
+- [Route service](http://project-osrm.org/docs/v5.23.0/api/#route-service)
+- [Table service](http://project-osrm.org/docs/v5.23.0/api/#table-service)
+- [Match service](http://project-osrm.org/docs/v5.23.0/api/#match-service)
+- [Trip service](http://project-osrm.org/docs/v5.23.0/api/#trip-service)
 
 ## Planned
 
