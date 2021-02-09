@@ -2,7 +2,6 @@
 using System.Collections.Generic;
 using System.Net.Http;
 using System.Text.Json;
-using System.Text.Json.Serialization;
 using System.Threading.Tasks;
 using Osrm.Examples;
 using Osrm.HttpApiClient;
@@ -13,12 +12,8 @@ namespace Osrm.ConsoleExamples
     {
         private static readonly Uri _baseAddress = new Uri("http://router.project-osrm.org");
 
-        private static readonly JsonSerializerOptions _jsonSerializerOptions = new JsonSerializerOptions 
+        private static readonly JsonSerializerOptions _jsonSerializerOptions = new JsonSerializerOptions(OsrmHttpApiClient.DefaultJsonSerializerOptions)
         {
-            Converters =
-            {
-                new JsonStringEnumConverter()
-            },
             WriteIndented = true
         };
 
