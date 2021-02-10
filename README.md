@@ -8,8 +8,8 @@ Http API Client for OSRM library.
 ## Table of Contents
 
 - [Getting Started](#getting-started)
-- [Planned](#planned)
 - [Questions](#questions)
+- [Planned](#planned)
 - [License](#license)
 
 ## Getting started
