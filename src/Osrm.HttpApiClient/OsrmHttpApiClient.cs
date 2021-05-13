@@ -110,7 +110,7 @@ namespace Osrm.HttpApiClient
         {
             var responseMessage = await _httpClient.GetAsync(request.Uri, cancellationToken).ConfigureAwait(false);
 
-            var vectorTile = await responseMessage.Content.ReadAsByteArrayAsync().ConfigureAwait(false);
+            var vectorTile = await responseMessage.Content.ReadAsByteArrayAsync(cancellationToken).ConfigureAwait(false);
 
             var response = new TileResponse
             {
@@ -136,14 +136,14 @@ namespace Osrm.HttpApiClient
         {
             var responseMessage = await _httpClient.GetAsync(request.Uri, cancellationToken).ConfigureAwait(false);
 
-            var response = await Deserialize<TResponse>(responseMessage).ConfigureAwait(false);
+            var response = await Deserialize<TResponse>(responseMessage, cancellationToken).ConfigureAwait(false);
 
             return response!;
         }
 
-        private async Task<T> Deserialize<T>(HttpResponseMessage response)
+        private async Task<T> Deserialize<T>(HttpResponseMessage response, CancellationToken cancellationToken)
         {
-            var contentStream = await response.Content.ReadAsStreamAsync().ConfigureAwait(false);
+            var contentStream = await response.Content.ReadAsStreamAsync(cancellationToken).ConfigureAwait(false);
 
             var result = await JsonSerializer.DeserializeAsync<T>(contentStream, JsonSerializerOptions).ConfigureAwait(false);
 
