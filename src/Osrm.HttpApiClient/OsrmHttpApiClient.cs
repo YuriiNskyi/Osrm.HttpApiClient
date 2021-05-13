@@ -99,6 +99,28 @@ namespace Osrm.HttpApiClient
             => MakeRequestAsync<TripRequest<TGeometry>, TripResponse<TGeometry>>(request, cancellationToken);
 
         /// <summary>
+        /// This service generates Mapbox Vector Tiles that can be viewed with a vector-tile capable slippy-map viewer.
+        /// </summary>
+        /// <param name="request">Tile request.</param>
+        /// <param name="cancellationToken">Cancellation token.</param>
+        /// <returns>Tile response.</returns>
+        public async Task<TileResponse> GetTileAsync(
+            TileRequest request,
+            CancellationToken cancellationToken = default)
+        {
+            var responseMessage = await _httpClient.GetAsync(request.Uri, cancellationToken).ConfigureAwait(false);
+
+            var vectorTile = await responseMessage.Content.ReadAsByteArrayAsync().ConfigureAwait(false);
+
+            var response = new TileResponse
+            {
+                VectorTile = vectorTile
+            };
+
+            return response;
+        }
+
+        /// <summary>
         /// A general way to make requests.
         /// </summary>
         /// <typeparam name="TRequest">Common request.</typeparam>

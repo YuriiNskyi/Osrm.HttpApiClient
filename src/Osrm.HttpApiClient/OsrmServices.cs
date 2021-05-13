@@ -47,5 +47,9 @@ namespace Osrm.HttpApiClient
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
         public static TripRequestBuilder<GeoJsonGeometry> GeoJsonTrip(string profile, Coordinates coordinates)
             => new (new GeoJsonTripRequest(profile, coordinates));
+
+        [MethodImpl(MethodImplOptions.AggressiveInlining)]
+        public static TileRequest Tile(string profile, int x, int y, int zoom)
+            => new (profile, x, y, zoom);
     }
 }

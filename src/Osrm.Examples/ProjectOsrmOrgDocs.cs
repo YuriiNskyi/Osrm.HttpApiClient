@@ -158,6 +158,14 @@ namespace Osrm.Examples
                     DestinationCoordinate.Last)
                 .Build();
 
+        public static TileRequest Z_13_tile_for_downtown_San_Francisco
+            => OsrmServices
+                .Tile(
+                    Driving,
+                    x: 1310,
+                    y: 3166,
+                    zoom: 13);
+
         public static RouteRequest<GeoJsonGeometry>[] GeoJsonRoutes => new RouteRequest<GeoJsonGeometry>[]
         {
             Full_GeoJson_route_query,

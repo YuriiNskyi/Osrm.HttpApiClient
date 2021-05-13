@@ -10,6 +10,7 @@ Http API Client for OSRM library.
 - [Getting Started](#getting-started)
 - [Questions](#questions)
 - [Planned](#planned)
+- [Benchmark results](#benchmark-results)
 - [License](#license)
 
 ## Getting started
@@ -125,6 +126,14 @@ public static TripRequest<GeoJsonGeometry> Round_trip_in_Berlin_with_four_stops_
             SourceCoordinate.First,
             DestinationCoordinate.Last)
         .Build();
+
+public static TileRequest Z_13_tile_for_downtown_San_Francisco
+    => OsrmServices
+        .Tile(
+            Driving,
+            x: 1310,
+            y: 3166,
+            zoom: 13);
 ```
 
 Check full examples inside [Osrm.Examples](https://github.com/YuriiNskyi/Osrm.HttpApiClient/tree/main/src/Osrm.Examples) project. Also, check [Osrm.ConsoleExamples](https://github.com/YuriiNskyi/Osrm.HttpApiClient/tree/main/src/Osrm.ConsoleExamples).
@@ -138,6 +147,7 @@ Currently supported services are:
 - [Table service](http://project-osrm.org/docs/v5.23.0/api/#table-service)
 - [Match service](http://project-osrm.org/docs/v5.23.0/api/#match-service)
 - [Trip service](http://project-osrm.org/docs/v5.23.0/api/#trip-service)
+- [Tile service](http://project-osrm.org/docs/v5.23.0/api/#tile-service)
 
 Feel free to open PR's, in case something warns you or you found anything buggy here!
 
@@ -145,7 +155,7 @@ Feel free to open PR's, in case something warns you or you found anything buggy 
 
 ### How can I use it with ASP.NET Core?
 
-Simply registering `OsrmHttpApiClient` in DI container:
+Simply register `OsrmHttpApiClient` in DI container:
 
 ```c#
 services.AddHttpClient<OsrmHttpApiClient>(httpClient =>
@@ -172,10 +182,37 @@ In case you want to change any model, they are all unsealed, feel free to inheri
 
 ## Planned
 
-- Add `Tile` service.
-- Slightly refactor, extract models to separate packages.
-- Create some benchmarks.
+- ~~Add `Tile` service.~~
+- ~~Slightly refactor, extract models to separate packages.~~
+- ~~Create some benchmarks.~~
 - Create separate, zero-alloc version of this library.
+
+## Benchmark results
+
+``` ini
+BenchmarkDotNet=v0.12.1, OS=Windows 10.0.19042
+AMD Ryzen 5 2600, 1 CPU, 12 logical and 6 physical cores
+.NET Core SDK=5.0.202
+  [Host]     : .NET Core 5.0.5 (CoreCLR 5.0.521.16609, CoreFX 5.0.521.16609), X64 RyuJIT
+  DefaultJob : .NET Core 5.0.5 (CoreCLR 5.0.521.16609, CoreFX 5.0.521.16609), X64 RyuJIT
+```
+| Method                                                       |      Mean |    Error |   StdDev |    Median |  Gen 0 | Gen 1 | Gen 2 | Allocated |
+| ------------------------------------------------------------ | --------: | -------: | -------: | --------: | -----: | ----: | ----: | --------: |
+| Full_GeoJson_route_query                                     |  83.30 ns | 1.644 ns | 2.922 ns |  82.77 ns | 0.0975 |     - |     - |     408 B |
+| Full_Polyline_route_query                                    |  87.41 ns | 1.705 ns | 2.094 ns |  86.57 ns | 0.0975 |     - |     - |     408 B |
+| Query_on_Berlin_with_three_coordinates                       |  80.44 ns | 1.074 ns | 0.897 ns |  80.30 ns | 0.0975 |     - |     - |     408 B |
+| Query_on_Berlin_excluding_the_usage_of_motorways             |  92.39 ns | 1.904 ns | 3.847 ns |  91.12 ns | 0.0918 |     - |     - |     384 B |
+| Query_on_Berlin_using_polyline                               |  55.30 ns | 1.152 ns | 2.048 ns |  54.91 ns | 0.0343 |     - |     - |     144 B |
+| Querying_nearest_three_snapped_locations                     |  61.50 ns | 1.303 ns | 1.694 ns |  61.07 ns | 0.0612 |     - |     - |     256 B |
+| A_3x3_matrix                                                 |  84.98 ns | 1.751 ns | 2.084 ns |  84.10 ns | 0.1070 |     - |     - |     448 B |
+| A_1x3_duration_matrix                                        |  97.34 ns | 2.005 ns | 4.994 ns |  97.00 ns | 0.1147 |     - |     - |     480 B |
+| An_asymmetric_3x2_duration_matrix_with_from_the_polyline_encoded_locations |  68.64 ns | 1.428 ns | 1.700 ns |  69.32 ns | 0.0612 |     - |     - |     256 B |
+| A_3x3_duration_matrix                                        |  91.09 ns | 1.895 ns | 4.354 ns |  90.03 ns | 0.1070 |     - |     - |     448 B |
+| A_3x3_duration_matrix_for_CH                                 |  93.48 ns | 1.944 ns | 4.659 ns |  92.36 ns | 0.1070 |     - |     - |     448 B |
+| A_3x3_duration_matrix_and_a_3x3_distance_matrix_for_CH       |  94.02 ns | 1.607 ns | 1.850 ns |  94.12 ns | 0.1070 |     - |     - |     448 B |
+| Round_trip_in_Berlin_with_three_stops                        |  86.12 ns | 2.575 ns | 7.471 ns |  84.09 ns | 0.0975 |     - |     - |     408 B |
+| Round_trip_in_Berlin_with_four_stops_starting_at_the_first_stop_ending_at_the_last | 104.02 ns | 2.963 ns | 8.455 ns | 101.19 ns | 0.1166 |     - |     - |     488 B |
+| Z_13_tile_for_downtown_San_Francisco                         |  11.35 ns | 0.293 ns | 0.536 ns |  11.15 ns | 0.0095 |     - |     - |      40 B |
 
 ## License
 

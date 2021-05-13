@@ -6,8 +6,11 @@ using System.Linq;
 namespace Osrm.HttpApiClient
 {
     [DebuggerDisplay("{Uri, nq}")]
-    public abstract record CommonRequest
+    public abstract record CommonRequest : IOsrmRequest
     {
+        private IReadOnlyCollection<ClassName> _exclude = Array.Empty<ClassName>();
+        private Snapping _snapping = Snapping.Default;
+
         protected CommonRequest(string profile, Coordinates coordinates)
         {
             Profile = profile ?? PredefinedProfiles.Car;
@@ -43,12 +46,20 @@ namespace Osrm.HttpApiClient
         /// <summary>
         /// Additive list of classes to avoid, order does not matter.
         /// </summary>
-        public IReadOnlyCollection<ClassName> Exclude { get; set; } = Array.Empty<ClassName>();
+        public IReadOnlyCollection<ClassName> Exclude 
+        {
+            get => _exclude;
+            set => _exclude = value ?? Array.Empty<ClassName>();
+        }
 
         /// <summary>
         /// Default snapping avoids is_startpoint (see profile) edges, any will snap to any edge in the graph.
         /// </summary>
-        public Snapping Snapping { get; set; } = Snapping.Default;
+        public Snapping Snapping 
+        {
+            get => _snapping;
+            set => _snapping = value ?? Snapping.Default;
+        }
 
         /// <summary>
         /// Removes waypoints from the response. Waypoints are still calculated, but not serialized.
@@ -64,16 +75,16 @@ namespace Osrm.HttpApiClient
             {
                 var options = Coordinates.Options
                     .Concat(AdditionalOptions)
-                    .Concat(new[] 
+                    .Concat(new[]
                     {
                         RequestOption.Create("generate_hints", GenerateHints.ToLowerInvariant()),
-                        Exclude.Any() 
+                        Exclude.Any()
                             ? RequestOption.Create("exclude", Exclude.Select(e => e.Value).Join(RequestConstants.Comma))
                             : RequestOption.Empty,
                         RequestOption.Create("snapping", Snapping.Value),
                         RequestOption.Create("skip_waypoints", SkipWaypoints.ToLowerInvariant()),
                     })
-                    .Where(o => o.IsFull)
+                    .Where(o => o.HasValue)
                     .Select(o => o.ToString())
                     .Join('&');
 

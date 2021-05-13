@@ -1,4 +1,5 @@
 ﻿using BenchmarkDotNet.Attributes;
+using BenchmarkDotNet.Diagnosers;
 using Osrm.Examples;
 using Osrm.HttpApiClient;
 
@@ -62,5 +63,9 @@ namespace Osrm.Benchmarks
         [Benchmark]
         public CommonRequest Round_trip_in_Berlin_with_four_stops_starting_at_the_first_stop_ending_at_the_last()
             => ProjectOsrmOrgDocs.Round_trip_in_Berlin_with_four_stops_starting_at_the_first_stop_ending_at_the_last;
+
+        [Benchmark]
+        public TileRequest Z_13_tile_for_downtown_San_Francisco()
+            => ProjectOsrmOrgDocs.Z_13_tile_for_downtown_San_Francisco;
     }
 }

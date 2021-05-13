@@ -3,7 +3,7 @@
   <PropertyGroup>
     <TargetFramework>net5.0</TargetFramework>
     <Nullable>enable</Nullable>
-    <PackageVersion>1.0.0</PackageVersion>
+    <PackageVersion>1.1.0</PackageVersion>
     <PackageId>Osrm.HttpApiClient</PackageId>
     <Title>Osrm.HttpApiClient</Title>
     <Authors>Yurii Naurynskyi</Authors>
@@ -12,11 +12,17 @@
     <Description>Simple HTTP API client for OSRM server.</Description>
     <PackageTags>C#, OSRM, REST, API, HTTP, Client</PackageTags>
     <PackageProjectUrl>https://github.com/YuriiNskyi/Osrm.HttpApiClient</PackageProjectUrl>
-    <Version>1.0.0.0</Version>
-    <AssemblyVersion>1.0.0.0</AssemblyVersion>
-    <FileVersion>1.0.0.0</FileVersion>
+    <Version>1.1.0.0</Version>
+    <AssemblyVersion>1.1.0.0</AssemblyVersion>
+    <FileVersion>1.1.0.0</FileVersion>
     <RepositoryUrl>https://github.com/YuriiNskyi/Osrm.HttpApiClient</RepositoryUrl>
     <PackageLicenseUrl>https://github.com/YuriiNskyi/Osrm.HttpApiClient/blob/main/LICENSE</PackageLicenseUrl>
   </PropertyGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\Osrm.HttpApiClient.Models.Common\Osrm.HttpApiClient.Models.Common.csproj" />
+    <ProjectReference Include="..\Osrm.HttpApiClient.Models.Requests\Osrm.HttpApiClient.Models.Requests.csproj" />
+    <ProjectReference Include="..\Osrm.HttpApiClient.Models.Responses\Osrm.HttpApiClient.Models.Responses.csproj" />
+  </ItemGroup>
 
 </Project>
