@@ -180,6 +180,12 @@ In case you want to change JSON serializer options - set them new to the `JsonSe
 
 In case you want to change any model, they are all unsealed, feel free to inherit them and change whatever you want. This library was designed in mind to always keep valid state inside models, so when modifying models, it's your responsibility to keep that valid state limitations.
 
+### What is X, Y and Zoom in Tile service?
+
+You can find useful information here: [Slippy map tilenames](https://wiki.openstreetmap.org/wiki/Slippy_map_tilenames).
+
+`SlippyMapTiles` methods are also provided, to help with conversion between `lon/lat` and `X/Y`.
+
 ## Planned
 
 - ~~Add `Tile` service.~~
