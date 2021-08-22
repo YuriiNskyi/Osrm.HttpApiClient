@@ -17,19 +17,19 @@
     <FileVersion>1.2.0.0</FileVersion>
     <RepositoryUrl>https://github.com/YuriiNskyi/Osrm.HttpApiClient</RepositoryUrl>
     <PackageLicenseUrl>https://github.com/YuriiNskyi/Osrm.HttpApiClient/blob/main/LICENSE</PackageLicenseUrl>
+    <TargetsForTfmSpecificBuildOutput>$(TargetsForTfmSpecificBuildOutput);CopyProjectReferencesToPackage</TargetsForTfmSpecificBuildOutput>
   </PropertyGroup>
-
-  <ItemGroup>
-    <PackageReference Include="Teronis.MSBuild.Packaging.ProjectBuildInPackage" Version="0.1.7">
-      <PrivateAssets>all</PrivateAssets>
-      <IncludeAssets>runtime; build; native; contentfiles; analyzers; buildtransitive</IncludeAssets>
-    </PackageReference>
-  </ItemGroup>
 
   <ItemGroup>
     <ProjectReference Include="..\Osrm.HttpApiClient.Models.Common\Osrm.HttpApiClient.Models.Common.csproj" PrivateAssets="all"/>
     <ProjectReference Include="..\Osrm.HttpApiClient.Models.Requests\Osrm.HttpApiClient.Models.Requests.csproj" PrivateAssets="all"/>
     <ProjectReference Include="..\Osrm.HttpApiClient.Models.Responses\Osrm.HttpApiClient.Models.Responses.csproj" PrivateAssets="all"/>
   </ItemGroup>
+
+  <Target Name="CopyProjectReferencesToPackage" DependsOnTargets="ResolveReferences">
+    <ItemGroup>
+      <BuildOutputInPackage Include="@(ReferenceCopyLocalPaths->WithMetadataValue('ReferenceSourceTarget', 'ProjectReference'))" />
+    </ItemGroup>
+  </Target>
 
 </Project>
