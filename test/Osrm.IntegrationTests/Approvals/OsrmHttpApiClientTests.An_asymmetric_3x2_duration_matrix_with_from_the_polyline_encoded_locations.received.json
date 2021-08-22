@@ -1,0 +1,74 @@
+﻿{
+    "durations": [
+        [
+            1001.1,
+            439.9
+        ],
+        [
+            842.5,
+            790.6
+        ],
+        [
+            681.5,
+            381.7
+        ]
+    ],
+    "distances": [],
+    "sources": [
+        {
+            "nodes": [],
+            "name": "Conrad-Blenkle-Stra\u00DFe",
+            "location": [
+                13.445158,
+                52.532489
+            ],
+            "distance": 4.232946,
+            "hint": "E4FVhYTzFYASAAAABgAAACcAAAAAAAAAtjukQVa9xUAbZC1CAAAAABIAAAAGAAAAJwAAAAAAAADf7QAAJijNAAmVIQNaKM0AHpUhAwEALwmA-8vc"
+        },
+        {
+            "nodes": [],
+            "name": "Columbiadamm",
+            "location": [
+                13.398532,
+                52.48384
+            ],
+            "distance": 24.526558,
+            "hint": "EwFYhVoBWIUZAAAADwAAAPoAAAAmAAAAOujgQQvMg0EYJoBDZiwrQhkAAAAPAAAA-gAAACYAAADf7QAABHLMAADXIAPuccwAJNYgAwQA3wWA-8vc"
+        },
+        {
+            "nodes": [],
+            "name": "Klever Stra\u00DFe",
+            "location": [
+                13.391237,
+                52.552769
+            ],
+            "distance": 29.892836,
+            "hint": "PrxUhUa8VIUsAAAAcgAAABMAAAAAAAAAVnPsQWgvmELP6U1BAAAAACwAAAByAAAAEwAAAAAAAADf7QAAhVXMAEHkIQNwVMwAcOMhAwEATxOA-8vc"
+        }
+    ],
+    "destinations": [
+        {
+            "nodes": [],
+            "name": "Helmholtzstra\u00DFe",
+            "location": [
+                13.325698,
+                52.521718
+            ],
+            "distance": 7.872453,
+            "hint": "Ba9MhRWvTIVHAAAAEQAAAD4AAAAAAAAApjmfQr6mlkFS5odCAAAAAEcAAAARAAAAPgAAAAAAAADf7QAAglXLAPZqIQOiVcsAsmohAwMA7w-A-8vc"
+        },
+        {
+            "nodes": [],
+            "name": "Torstra\u00DFe",
+            "location": [
+                13.403316,
+                52.529723
+            ],
+            "distance": 14.802468,
+            "hint": "b31Vhf___38FAAAAEgAAALAAAACcAgAA0wVvQJBUAkEyo-pCkWzSQwUAAAASAAAAsAAAAJwCAADf7QAAtITMADuKIQO4hMwAtokhAwQAjwWA-8vc"
+        }
+    ],
+    "fallback_speed_cells": [],
+    "code": "Ok",
+    "message": null
+}

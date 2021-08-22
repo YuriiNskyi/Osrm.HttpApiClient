@@ -1,0 +1,87 @@
+﻿{
+    "durations": [
+        [
+            0,
+            251.5,
+            384.5
+        ],
+        [
+            258.2,
+            0,
+            363.5
+        ],
+        [
+            354.7,
+            301.1,
+            0
+        ]
+    ],
+    "distances": [],
+    "sources": [
+        {
+            "nodes": [],
+            "name": "Friedrichstra\u00DFe",
+            "location": [
+                13.388798,
+                52.517033
+            ],
+            "distance": 4.231666,
+            "hint": "6zxYhVs9WIUYAAAABQAAAAAAAAAgAAAASjFaQdLNK0AAAAAAsPePQQwAAAADAAAAAAAAABAAAADf7QAA_kvMAKlYIQM8TMwArVghAwAA7wqA-8vc"
+        },
+        {
+            "nodes": [],
+            "name": "Torstra\u00DFe",
+            "location": [
+                13.397631,
+                52.529432
+            ],
+            "distance": 2.789393,
+            "hint": "ZPMVgJd9VYUGAAAACgAAAAAAAAB2AAAAW7-PQOKcyEAAAAAApq6DQgYAAAAKAAAAAAAAAHYAAADf7QAAf27MABiJIQOCbswA_4ghAwAAXwWA-8vc"
+        },
+        {
+            "nodes": [],
+            "name": "Platz der Vereinten Nationen",
+            "location": [
+                13.428554,
+                52.523239
+            ],
+            "distance": 2.226595,
+            "hint": "A_MVgP___38fAAAAUQAAACYAAAAeAAAAsowKQkpQX0Lx6yZCvsQGQh8AAABRAAAAJgAAAB4AAADf7QAASufMAOdwIQNL58wA03AhAwMAvxCA-8vc"
+        }
+    ],
+    "destinations": [
+        {
+            "nodes": [],
+            "name": "Friedrichstra\u00DFe",
+            "location": [
+                13.388798,
+                52.517033
+            ],
+            "distance": 4.231666,
+            "hint": "6zxYhVs9WIUYAAAABQAAAAAAAAAgAAAASjFaQdLNK0AAAAAAsPePQQwAAAADAAAAAAAAABAAAADf7QAA_kvMAKlYIQM8TMwArVghAwAA7wqA-8vc"
+        },
+        {
+            "nodes": [],
+            "name": "Torstra\u00DFe",
+            "location": [
+                13.397631,
+                52.529432
+            ],
+            "distance": 2.789393,
+            "hint": "ZPMVgJd9VYUGAAAACgAAAAAAAAB2AAAAW7-PQOKcyEAAAAAApq6DQgYAAAAKAAAAAAAAAHYAAADf7QAAf27MABiJIQOCbswA_4ghAwAAXwWA-8vc"
+        },
+        {
+            "nodes": [],
+            "name": "Platz der Vereinten Nationen",
+            "location": [
+                13.428554,
+                52.523239
+            ],
+            "distance": 2.226595,
+            "hint": "A_MVgP___38fAAAAUQAAACYAAAAeAAAAsowKQkpQX0Lx6yZCvsQGQh8AAABRAAAAJgAAAB4AAADf7QAASufMAOdwIQNL58wA03AhAwMAvxCA-8vc"
+        }
+    ],
+    "fallback_speed_cells": [],
+    "code": "Ok",
+    "message": null
+}

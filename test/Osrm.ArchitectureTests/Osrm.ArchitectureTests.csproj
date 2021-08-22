@@ -1,0 +1,24 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>net5.0</TargetFramework>
+
+    <IsPackable>false</IsPackable>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <PackageReference Include="NUnit" Version="3.13.2" />
+    <PackageReference Include="NUnit3TestAdapter" Version="3.16.1" />
+    <PackageReference Include="Microsoft.NET.Test.Sdk" Version="16.5.0" />
+    <PackageReference Include="TngTech.ArchUnitNET" Version="0.5.6" />
+    <PackageReference Include="TngTech.ArchUnitNET.NUnit" Version="0.5.6" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\..\src\Osrm.HttpApiClient.Models.Common\Osrm.HttpApiClient.Models.Common.csproj" />
+    <ProjectReference Include="..\..\src\Osrm.HttpApiClient.Models.Requests\Osrm.HttpApiClient.Models.Requests.csproj" />
+    <ProjectReference Include="..\..\src\Osrm.HttpApiClient.Models.Responses\Osrm.HttpApiClient.Models.Responses.csproj" />
+    <ProjectReference Include="..\..\src\Osrm.HttpApiClient\Osrm.HttpApiClient.csproj" />
+  </ItemGroup>
+
+</Project>
