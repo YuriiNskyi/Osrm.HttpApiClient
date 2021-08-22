@@ -3,6 +3,7 @@ on:
   push:
     branches:
       - main # Default release branch
+      - 'release/**'
 jobs:
   publish:
     name: build, pack & publish
