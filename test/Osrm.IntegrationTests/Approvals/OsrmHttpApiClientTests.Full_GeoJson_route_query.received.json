@@ -8,7 +8,7 @@
                 52.517033
             ],
             "distance": 4.231666,
-            "hint": "6zxYhVs9WIUYAAAABQAAAAAAAAAgAAAASjFaQdLNK0AAAAAAsPePQQwAAAADAAAAAAAAABAAAADf7QAA_kvMAKlYIQM8TMwArVghAwAA7wqA-8vc"
+            "hint": "J4zFiJuMxYgYAAAABQAAAAAAAAAgAAAASjFaQdLNK0AAAAAAsPePQQwAAAADAAAAAAAAABAAAAAe5QAA_kvMAKlYIQM8TMwArVghAwAA7wquu9rw"
         },
         {
             "nodes": [],
@@ -18,7 +18,7 @@
                 52.529432
             ],
             "distance": 2.789393,
-            "hint": "ZPMVgJd9VYUGAAAACgAAAAAAAAB2AAAAW7-PQOKcyEAAAAAApq6DQgYAAAAKAAAAAAAAAHYAAADf7QAAf27MABiJIQOCbswA_4ghAwAAXwWA-8vc"
+            "hint": "98EhgFMIt4gGAAAACgAAAAAAAAB2AAAAW7-PQOKcyEAAAAAApq6DQgYAAAAKAAAAAAAAAHYAAAAe5QAAf27MABiJIQOCbswA_4ghAwAAXwWuu9rw"
         },
         {
             "nodes": [],
@@ -28,12 +28,12 @@
                 52.523239
             ],
             "distance": 2.226595,
-            "hint": "A_MVgP___38fAAAAUQAAACYAAAAeAAAAsowKQkpQX0Lx6yZCvsQGQh8AAABRAAAAJgAAAB4AAADf7QAASufMAOdwIQNL58wA03AhAwMAvxCA-8vc"
+            "hint": "McAhgP___38fAAAAUQAAACYAAAAeAAAAsowKQkpQX0Lx6yZCvsQGQh8AAABRAAAAJgAAAB4AAAAe5QAASufMAOdwIQNL58wA03AhAwMAvxCuu9rw"
         }
     ],
     "routes": [
         {
-            "distance": 4723.9,
+            "distance": 4723.8,
             "duration": 615,
             "geometry": {
                 "coordinates": [
@@ -254,12 +254,20 @@
                         52.526386
                     ],
                     [
-                        13.387184,
-                        52.527008
+                        13.38728,
+                        52.52641
                     ],
                     [
-                        13.387189,
+                        13.387196,
+                        52.526997
+                    ],
+                    [
+                        13.387196,
                         52.52703
+                    ],
+                    [
+                        13.387211,
+                        52.527107
                     ],
                     [
                         13.387215,
@@ -358,12 +366,20 @@
                         52.528996
                     ],
                     [
-                        13.397265,
-                        52.529358
+                        13.395994,
+                        52.52906
                     ],
                     [
-                        13.397326,
-                        52.529373
+                        13.397192,
+                        52.52935
+                    ],
+                    [
+                        13.397264,
+                        52.529366
+                    ],
+                    [
+                        13.397337,
+                        52.529385
                     ],
                     [
                         13.397565,
@@ -887,14 +903,14 @@
             "weight_name": "routability",
             "legs": [
                 {
-                    "distance": 1884.8,
+                    "distance": 1884.7,
                     "duration": 251.5,
                     "weight": 252.7,
                     "summary": "Friedrichstra\u00DFe, Torstra\u00DFe",
                     "steps": [
                         {
-                            "distance": 1135.8,
-                            "duration": 129.1,
+                            "distance": 1135.7,
+                            "duration": 129.2,
                             "geometry": {
                                 "coordinates": [
                                     [
@@ -1114,12 +1130,20 @@
                                         52.526386
                                     ],
                                     [
-                                        13.387184,
-                                        52.527008
+                                        13.38728,
+                                        52.52641
                                     ],
                                     [
-                                        13.387189,
+                                        13.387196,
+                                        52.526997
+                                    ],
+                                    [
+                                        13.387196,
                                         52.52703
+                                    ],
+                                    [
+                                        13.387211,
+                                        52.527107
                                     ],
                                     [
                                         13.387215,
@@ -1127,7 +1151,7 @@
                                     ]
                                 ]
                             },
-                            "weight": 130.3,
+                            "weight": 130.4,
                             "name": "Friedrichstra\u00DFe",
                             "ref": null,
                             "pronunciation": null,
@@ -1230,50 +1254,12 @@
                                 },
                                 {
                                     "location": [
-                                        13.388392,
-                                        52.51991
-                                    ],
-                                    "bearings": [
-                                        0,
-                                        180
-                                    ],
-                                    "classes": [
-                                        "tunnel"
-                                    ],
-                                    "entry": [
-                                        true,
-                                        false
-                                    ],
-                                    "in": 1,
-                                    "out": 0,
-                                    "lanes": []
-                                },
-                                {
-                                    "location": [
-                                        13.388327,
-                                        52.520283
-                                    ],
-                                    "bearings": [
-                                        0,
-                                        180
-                                    ],
-                                    "classes": [],
-                                    "entry": [
-                                        true,
-                                        false
-                                    ],
-                                    "in": 1,
-                                    "out": 0,
-                                    "lanes": []
-                                },
-                                {
-                                    "location": [
                                         13.388308,
                                         52.520336
                                     ],
                                     "bearings": [
                                         0,
-                                        165,
+                                        180,
                                         270
                                     ],
                                     "classes": [],
@@ -1458,7 +1444,7 @@
                         },
                         {
                             "distance": 749,
-                            "duration": 122.4,
+                            "duration": 122.3,
                             "geometry": {
                                 "coordinates": [
                                     [
@@ -1558,12 +1544,20 @@
                                         52.528996
                                     ],
                                     [
-                                        13.397265,
-                                        52.529358
+                                        13.395994,
+                                        52.52906
                                     ],
                                     [
-                                        13.397326,
-                                        52.529373
+                                        13.397192,
+                                        52.52935
+                                    ],
+                                    [
+                                        13.397264,
+                                        52.529366
+                                    ],
+                                    [
+                                        13.397337,
+                                        52.529385
                                     ],
                                     [
                                         13.397565,
@@ -1575,7 +1569,7 @@
                                     ]
                                 ]
                             },
-                            "weight": 122.4,
+                            "weight": 122.3,
                             "name": "Torstra\u00DFe",
                             "ref": null,
                             "pronunciation": null,
@@ -1585,7 +1579,7 @@
                                     13.387215,
                                     52.527166
                                 ],
-                                "bearing_before": 5,
+                                "bearing_before": 4,
                                 "bearing_after": 71,
                                 "type": "turn",
                                 "modifier": "right",

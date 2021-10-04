@@ -1,4 +1,6 @@
-﻿namespace Osrm.HttpApiClient
+﻿using System.Runtime.CompilerServices;
+
+namespace Osrm.HttpApiClient
 {
     /// <summary>
     /// Base class for building custom builders.
@@ -24,6 +26,7 @@
         /// Disables generating hints.
         /// </summary>
         /// <returns>Current builder.</returns>
+        [MethodImpl(MethodImplOptions.AggressiveInlining)]
         public TBuilder NotGenerateHints()
         {
             Request.GenerateHints = false;
@@ -36,6 +39,7 @@
         /// </summary>
         /// <param name="classNames">Class names to exclude.</param>
         /// <returns>Current builder.</returns>
+        [MethodImpl(MethodImplOptions.AggressiveInlining)]
         public TBuilder Exclude(params ClassName[] classNames)
         {
             Request.Exclude = classNames;
@@ -48,6 +52,7 @@
         /// </summary>
         /// <param name="snapping">Snapping.</param>
         /// <returns>Current builder.</returns>
+        [MethodImpl(MethodImplOptions.AggressiveInlining)]
         public TBuilder Snapping(Snapping snapping)
         {
             Request.Snapping = snapping;
@@ -59,6 +64,7 @@
         /// Removes waypoints from the response.
         /// </summary>
         /// <returns>Current builder.</returns>
+        [MethodImpl(MethodImplOptions.AggressiveInlining)]
         public TBuilder SkipWaypoints()
         {
             Request.SkipWaypoints = true;
@@ -70,6 +76,7 @@
         /// Gets already built request.
         /// </summary>
         /// <returns></returns>
+        [MethodImpl(MethodImplOptions.AggressiveInlining)]
         public TRequest Build()
             => Request;
     }

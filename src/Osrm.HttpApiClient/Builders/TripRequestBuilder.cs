@@ -1,4 +1,6 @@
-﻿namespace Osrm.HttpApiClient
+﻿using System.Runtime.CompilerServices;
+
+namespace Osrm.HttpApiClient
 {
     /// <summary>
     /// Fluent way to build Trip requests.
@@ -20,6 +22,7 @@
         /// Returns steps in response.
         /// </summary>
         /// <returns>Current builder.</returns>
+        [MethodImpl(MethodImplOptions.AggressiveInlining)]
         public TripRequestBuilder<TGeometry> ReturnSteps()
         {
             Request.Steps = true;
@@ -31,6 +34,7 @@
         /// Returns annotations in response.
         /// </summary>
         /// <returns>Current builder.</returns>
+        [MethodImpl(MethodImplOptions.AggressiveInlining)]
         public TripRequestBuilder<TGeometry> ReturnAnnotations()
         {
             Request.Annotations = true;
@@ -43,6 +47,7 @@
         /// </summary>
         /// <param name="overview">Overview.</param>
         /// <returns>Current builder.</returns>
+        [MethodImpl(MethodImplOptions.AggressiveInlining)]
         public TripRequestBuilder<TGeometry> Overview(Overview overview)
         {
             Request.Overview = overview;
@@ -56,6 +61,7 @@
         /// <param name="source">Source.</param>
         /// <param name="destination">Destination.</param>
         /// <returns>Current builder.</returns>
+        [MethodImpl(MethodImplOptions.AggressiveInlining)]
         public TripRequestBuilder<TGeometry> WithRoundTrip(
             SourceCoordinate source,
             DestinationCoordinate destination)
@@ -69,6 +75,7 @@
         /// Returned route is NOT a roundtrip (route returns to first location)
         /// </summary>
         /// <returns>Current builder.</returns>
+        [MethodImpl(MethodImplOptions.AggressiveInlining)]
         public TripRequestBuilder<TGeometry> WithoutRoundtrip()
         {
             Request.WithoutRoundtrip();

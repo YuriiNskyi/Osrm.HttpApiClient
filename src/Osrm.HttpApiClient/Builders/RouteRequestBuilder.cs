@@ -1,4 +1,6 @@
-﻿namespace Osrm.HttpApiClient
+﻿using System.Runtime.CompilerServices;
+
+namespace Osrm.HttpApiClient
 {
     /// <summary>
     /// Fluent way to build Route requests.
@@ -20,6 +22,7 @@
         /// Returns alternatives in response.
         /// </summary>
         /// <returns>Current builder.</returns>
+        [MethodImpl(MethodImplOptions.AggressiveInlining)]
         public RouteRequestBuilder<TGeometry> ReturnAlternatives()
         {
             Request.Alternatives = true;
@@ -31,6 +34,7 @@
         /// Returns steps in response.
         /// </summary>
         /// <returns>Current builder.</returns>
+        [MethodImpl(MethodImplOptions.AggressiveInlining)]
         public RouteRequestBuilder<TGeometry> ReturnSteps()
         {
             Request.Steps = true;
@@ -42,6 +46,7 @@
         /// Returns annotations in response.
         /// </summary>
         /// <returns>Current builder.</returns>
+        [MethodImpl(MethodImplOptions.AggressiveInlining)]
         public RouteRequestBuilder<TGeometry> ReturnAnnotations()
         {
             Request.Annotations = true;
@@ -54,6 +59,7 @@
         /// </summary>
         /// <param name="overview">Overview.</param>
         /// <returns>Current builder.</returns>
+        [MethodImpl(MethodImplOptions.AggressiveInlining)]
         public RouteRequestBuilder<TGeometry> Overview(Overview overview)
         {
             Request.Overview = overview;
@@ -66,6 +72,7 @@
         /// </summary>
         /// <param name="continueStraight">Continue straight parameter.</param>
         /// <returns>Current builder.</returns>
+        [MethodImpl(MethodImplOptions.AggressiveInlining)]
         public RouteRequestBuilder<TGeometry> ContinueStraight(ContinueStraight continueStraight)
         {
             Request.ContinueStraight = continueStraight;
@@ -78,6 +85,7 @@
         /// </summary>
         /// <param name="waypoints">Waypoints.</param>
         /// <returns>Current builder.</returns>
+        [MethodImpl(MethodImplOptions.AggressiveInlining)]
         public RouteRequestBuilder<TGeometry> Waypoints(params int[] waypoints)
         {
             Request.Waypoints = waypoints;

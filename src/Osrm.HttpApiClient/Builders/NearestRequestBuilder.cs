@@ -1,4 +1,6 @@
-﻿namespace Osrm.HttpApiClient
+﻿using System.Runtime.CompilerServices;
+
+namespace Osrm.HttpApiClient
 {
     /// <summary>
     /// Fluent way to build Nearest requests.
@@ -15,6 +17,7 @@
         /// </summary>
         /// <param name="nearestSegments">Nearest segments.</param>
         /// <returns>Current builder.</returns>
+        [MethodImpl(MethodImplOptions.AggressiveInlining)]
         public NearestRequestBuilder NearestSegments(int nearestSegments)
         {
             Request.NearestSegments = nearestSegments;

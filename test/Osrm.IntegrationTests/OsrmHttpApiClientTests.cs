@@ -176,12 +176,12 @@ namespace Osrm.IntegrationTests
             Approvals.VerifyJson(json);
         }
 
-        ////[Test]
-        ////public async Task Z_13_tile_for_downtown_San_Francisco()
-        ////{
-        ////    var response = await _osrmClient.GetTileAsync(ProjectOsrmOrgDocs.Z_13_tile_for_downtown_San_Francisco);
+        [Test]
+        public async Task Z_13_tile_for_downtown_San_Francisco()
+        {
+            var response = await _osrmClient.GetTileAsync(ProjectOsrmOrgDocs.Z_13_tile_for_downtown_San_Francisco);
 
-        ////    Approvals.VerifyBinaryFile(response.VectorTile, ".mvt");
-        ////}
+            Approvals.VerifyBinaryFile(response.VectorTile, ".mvt");
+        }
     }
 }

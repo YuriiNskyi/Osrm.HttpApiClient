@@ -10,7 +10,7 @@
                 52.517033
             ],
             "distance": 4.231666,
-            "hint": "6zxYhVs9WIUYAAAABQAAAAAAAAAgAAAASjFaQdLNK0AAAAAAsPePQQwAAAADAAAAAAAAABAAAADf7QAA_kvMAKlYIQM8TMwArVghAwAA7wqA-8vc"
+            "hint": "J4zFiJuMxYgYAAAABQAAAAAAAAAgAAAASjFaQdLNK0AAAAAAsPePQQwAAAADAAAAAAAAABAAAAAe5QAA_kvMAKlYIQM8TMwArVghAwAA7wquu9rw"
         },
         {
             "trips_index": 0,
@@ -22,7 +22,7 @@
                 52.529432
             ],
             "distance": 2.789393,
-            "hint": "ZPMVgJd9VYUGAAAACgAAAAAAAAB2AAAAW7-PQOKcyEAAAAAApq6DQgYAAAAKAAAAAAAAAHYAAADf7QAAf27MABiJIQOCbswA_4ghAwAAXwWA-8vc"
+            "hint": "98EhgFMIt4gGAAAACgAAAAAAAAB2AAAAW7-PQOKcyEAAAAAApq6DQgYAAAAKAAAAAAAAAHYAAAAe5QAAf27MABiJIQOCbswA_4ghAwAAXwWuu9rw"
         },
         {
             "trips_index": 0,
@@ -34,13 +34,13 @@
                 52.523239
             ],
             "distance": 2.226595,
-            "hint": "A_MVgP___38fAAAAUQAAACYAAAAeAAAAsowKQkpQX0Lx6yZCvsQGQh8AAABRAAAAJgAAAB4AAADf7QAASufMAOdwIQNL58wA03AhAwMAvxCA-8vc"
+            "hint": "McAhgP___38fAAAAUQAAACYAAAAeAAAAsowKQkpQX0Lx6yZCvsQGQh8AAABRAAAAJgAAAB4AAAAe5QAASufMAOdwIQNL58wA03AhAwMAvxCuu9rw"
         }
     ],
     "trips": [
         {
-            "distance": 7982.4,
-            "duration": 943.8,
+            "distance": 7982.2,
+            "duration": 943.6,
             "geometry": {
                 "coordinates": [
                     [
@@ -169,13 +169,13 @@
                     ]
                 ]
             },
-            "weight": 946.8,
+            "weight": 946.6,
             "weight_name": "routability",
             "legs": [
                 {
-                    "distance": 3795.2,
-                    "duration": 384.5,
-                    "weight": 386.3,
+                    "distance": 3795,
+                    "duration": 384.4,
+                    "weight": 386.2,
                     "summary": "",
                     "steps": [],
                     "annotations": null
@@ -190,8 +190,8 @@
                 },
                 {
                     "distance": 1900.4,
-                    "duration": 258.2,
-                    "weight": 259.4,
+                    "duration": 258.1,
+                    "weight": 259.3,
                     "summary": "",
                     "steps": [],
                     "annotations": null

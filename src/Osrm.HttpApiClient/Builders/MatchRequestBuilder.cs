@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Runtime.CompilerServices;
 
 namespace Osrm.HttpApiClient
 {
@@ -22,6 +23,7 @@ namespace Osrm.HttpApiClient
         /// Returns steps in response.
         /// </summary>
         /// <returns>Current builder.</returns>
+        [MethodImpl(MethodImplOptions.AggressiveInlining)]
         public MatchRequestBuilder<TGeometry> ReturnSteps()
         {
             Request.Steps = true;
@@ -33,6 +35,7 @@ namespace Osrm.HttpApiClient
         /// Returns annotations in response.
         /// </summary>
         /// <returns>Current builder.</returns>
+        [MethodImpl(MethodImplOptions.AggressiveInlining)]
         public MatchRequestBuilder<TGeometry> ReturnAnnotations()
         {
             Request.Annotations = true;
@@ -45,6 +48,7 @@ namespace Osrm.HttpApiClient
         /// </summary>
         /// <param name="overview">Overview.</param>
         /// <returns>Current builder.</returns>
+        [MethodImpl(MethodImplOptions.AggressiveInlining)]
         public MatchRequestBuilder<TGeometry> Overview(Overview overview)
         {
             Request.Overview = overview;
@@ -57,6 +61,7 @@ namespace Osrm.HttpApiClient
         /// </summary>
         /// <param name="timestamps">Timestamps.</param>
         /// <returns>Current builder.</returns>
+        [MethodImpl(MethodImplOptions.AggressiveInlining)]
         public MatchRequestBuilder<TGeometry> Timestamps(params DateTimeOffset[] timestamps)
         {
             Request.Timestamps = timestamps;
@@ -69,6 +74,7 @@ namespace Osrm.HttpApiClient
         /// </summary>
         /// <param name="radiuses">Radiuses.</param>
         /// <returns>Current builder.</returns>
+        [MethodImpl(MethodImplOptions.AggressiveInlining)]
         public MatchRequestBuilder<TGeometry> Radiuses(params double[] radiuses)
         {
             Request.Radiuses = radiuses;
@@ -81,6 +87,7 @@ namespace Osrm.HttpApiClient
         /// </summary>
         /// <param name="gaps">Gaps.</param>
         /// <returns>Current builder.</returns>
+        [MethodImpl(MethodImplOptions.AggressiveInlining)]
         public MatchRequestBuilder<TGeometry> Gaps(Gaps gaps)
         {
             Request.Gaps = gaps;
@@ -92,6 +99,7 @@ namespace Osrm.HttpApiClient
         /// Sets Tide property to true.
         /// </summary>
         /// <returns>Current builder.</returns>
+        [MethodImpl(MethodImplOptions.AggressiveInlining)]
         public MatchRequestBuilder<TGeometry> IsTidy()
         {
             Request.Tidy = true;
@@ -104,6 +112,7 @@ namespace Osrm.HttpApiClient
         /// </summary>
         /// <param name="waypoints">Waypoints.</param>
         /// <returns>Current builder.</returns>
+        [MethodImpl(MethodImplOptions.AggressiveInlining)]
         public MatchRequestBuilder<TGeometry> Waypoints(params int[] waypoints)
         {
             Request.Waypoints = waypoints;

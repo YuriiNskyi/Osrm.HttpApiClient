@@ -10,7 +10,7 @@
                 52.517033
             ],
             "distance": 4.231666,
-            "hint": "6zxYhVs9WIUYAAAABQAAAAAAAAAgAAAASjFaQdLNK0AAAAAAsPePQQwAAAADAAAAAAAAABAAAADf7QAA_kvMAKlYIQM8TMwArVghAwAA7wqA-8vc"
+            "hint": "J4zFiJuMxYgYAAAABQAAAAAAAAAgAAAASjFaQdLNK0AAAAAAsPePQQwAAAADAAAAAAAAABAAAAAe5QAA_kvMAKlYIQM8TMwArVghAwAA7wquu9rw"
         },
         {
             "trips_index": 0,
@@ -22,7 +22,7 @@
                 52.529432
             ],
             "distance": 2.789393,
-            "hint": "ZPMVgJd9VYUGAAAACgAAAAAAAAB2AAAAW7-PQOKcyEAAAAAApq6DQgYAAAAKAAAAAAAAAHYAAADf7QAAf27MABiJIQOCbswA_4ghAwAAXwWA-8vc"
+            "hint": "98EhgFMIt4gGAAAACgAAAAAAAAB2AAAAW7-PQOKcyEAAAAAApq6DQgYAAAAKAAAAAAAAAHYAAAAe5QAAf27MABiJIQOCbswA_4ghAwAAXwWuu9rw"
         },
         {
             "trips_index": 0,
@@ -34,7 +34,7 @@
                 52.523239
             ],
             "distance": 2.226595,
-            "hint": "A_MVgP___38fAAAAUQAAACYAAAAeAAAAsowKQkpQX0Lx6yZCvsQGQh8AAABRAAAAJgAAAB4AAADf7QAASufMAOdwIQNL58wA03AhAwMAvxCA-8vc"
+            "hint": "McAhgP___38fAAAAUQAAACYAAAAeAAAAsowKQkpQX0Lx6yZCvsQGQh8AAABRAAAAJgAAAB4AAAAe5QAASufMAOdwIQNL58wA03AhAwMAvxCuu9rw"
         },
         {
             "trips_index": 0,
@@ -46,12 +46,12 @@
                 52.523292
             ],
             "distance": 15.539673,
-            "hint": "7GNVhf___3_XAAAADQEAADAAAAAPAAAA3dqzQos3skHbKaNB3lbDQNcAAAANAQAAMAAAAA8AAADf7QAAfL_MABxxIQM7wMwAz3AhAwQAHwKA-8vc"
+            "hint": "cwe3iP___3_XAAAADQEAADAAAAAPAAAA3dqzQos3skHbKaNB3lbDQNcAAAANAQAAMAAAAA8AAAAe5QAAfL_MABxxIQM7wMwAz3AhAwQAHwKuu9rw"
         }
     ],
     "trips": [
         {
-            "distance": 8983.6,
+            "distance": 8983.5,
             "duration": 1118.1,
             "geometry": {
                 "coordinates": [
@@ -233,7 +233,7 @@
             "weight_name": "routability",
             "legs": [
                 {
-                    "distance": 1884.8,
+                    "distance": 1884.7,
                     "duration": 251.5,
                     "weight": 252.7,
                     "summary": "",

@@ -1,4 +1,6 @@
-﻿namespace Osrm.HttpApiClient
+﻿using System.Runtime.CompilerServices;
+
+namespace Osrm.HttpApiClient
 {
     /// <summary>
     /// Fluent way to build Table requests.
@@ -20,6 +22,7 @@
         /// </summary>
         /// <param name="sources">Sources.</param>
         /// <returns>Current builder.</returns>
+        [MethodImpl(MethodImplOptions.AggressiveInlining)]
         public TableRequestBuilder Sources(params int[] sources)
         {
             Request.Sources = sources;
@@ -32,6 +35,7 @@
         /// </summary>
         /// <param name="destinations">Destinations</param>
         /// <returns>Current builder.</returns>
+        [MethodImpl(MethodImplOptions.AggressiveInlining)]
         public TableRequestBuilder Destinations(params int[] destinations)
         {
             Request.Destinations = destinations;
@@ -44,6 +48,7 @@
         /// </summary>
         /// <param name="annotations">Annotations.</param>
         /// <returns>Current builder.</returns>
+        [MethodImpl(MethodImplOptions.AggressiveInlining)]
         public TableRequestBuilder Annotations(Annotations annotations)
         {
             Request.Annotations = annotations;
@@ -56,6 +61,7 @@
         /// </summary>
         /// <param name="fallbackSpeed">Fallback speed.</param>
         /// <returns>Current builder.</returns>
+        [MethodImpl(MethodImplOptions.AggressiveInlining)]
         public TableRequestBuilder FallbackSpeed(double fallbackSpeed)
         {
             Request.FallbackSpeed = fallbackSpeed;
@@ -68,6 +74,7 @@
         /// </summary>
         /// <param name="fallbackCoordinate">Fallback coordinate.</param>
         /// <returns>Current builder.</returns>
+        [MethodImpl(MethodImplOptions.AggressiveInlining)]
         public TableRequestBuilder FallbackCoordinate(FallbackCoordinate fallbackCoordinate)
         {
             Request.FallbackCoordinate = fallbackCoordinate;
@@ -80,6 +87,7 @@
         /// </summary>
         /// <param name="scaleFactor">Scale factor.</param>
         /// <returns>Current builder.</returns>
+        [MethodImpl(MethodImplOptions.AggressiveInlining)]
         public TableRequestBuilder ScaleFactor(double scaleFactor)
         {
             Request.ScaleFactor = scaleFactor;

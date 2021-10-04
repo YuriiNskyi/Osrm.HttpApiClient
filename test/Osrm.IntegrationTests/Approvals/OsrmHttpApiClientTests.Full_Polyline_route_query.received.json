@@ -8,7 +8,7 @@
                 52.517033
             ],
             "distance": 4.231666,
-            "hint": "6zxYhVs9WIUYAAAABQAAAAAAAAAgAAAASjFaQdLNK0AAAAAAsPePQQwAAAADAAAAAAAAABAAAADf7QAA_kvMAKlYIQM8TMwArVghAwAA7wqA-8vc"
+            "hint": "J4zFiJuMxYgYAAAABQAAAAAAAAAgAAAASjFaQdLNK0AAAAAAsPePQQwAAAADAAAAAAAAABAAAAAe5QAA_kvMAKlYIQM8TMwArVghAwAA7wquu9rw"
         },
         {
             "nodes": [],
@@ -18,7 +18,7 @@
                 52.529432
             ],
             "distance": 2.789393,
-            "hint": "ZPMVgJd9VYUGAAAACgAAAAAAAAB2AAAAW7-PQOKcyEAAAAAApq6DQgYAAAAKAAAAAAAAAHYAAADf7QAAf27MABiJIQOCbswA_4ghAwAAXwWA-8vc"
+            "hint": "98EhgFMIt4gGAAAACgAAAAAAAAB2AAAAW7-PQOKcyEAAAAAApq6DQgYAAAAKAAAAAAAAAHYAAAAe5QAAf27MABiJIQOCbswA_4ghAwAAXwWuu9rw"
         },
         {
             "nodes": [],
@@ -28,28 +28,28 @@
                 52.523239
             ],
             "distance": 2.226595,
-            "hint": "A_MVgP___38fAAAAUQAAACYAAAAeAAAAsowKQkpQX0Lx6yZCvsQGQh8AAABRAAAAJgAAAB4AAADf7QAASufMAOdwIQNL58wA03AhAwMAvxCA-8vc"
+            "hint": "McAhgP___38fAAAAUQAAACYAAAAeAAAAsowKQkpQX0Lx6yZCvsQGQh8AAABRAAAAJgAAAB4AAAAe5QAASufMAOdwIQNL58wA03AhAwMAvxCuu9rw"
         }
     ],
     "routes": [
         {
-            "distance": 4723.9,
+            "distance": 4723.8,
             "duration": 615,
-            "geometry": "mfp_I__vpAYBO@K@[BuBRgBLK@UBMMC?AAKAe@FyBTC@E?IDKDA@K@]BUBSBA?E@E@A@KFUBK@mAL{CZQ@qBRUBmAFc@@}@Fu@DG?a@B[@qAF_AJ[D_E\u0060@SBO@ODA@UDA?]J{BRCA[ECa@AI]mCCUE[AK[iCWqB[{Bk@sE_@_DAICSAOIm@AIQuACOQyAG[Gc@]wBw@aFgAuHAKKo@?KAQ?KIuDQmHE}BBQ?Q?OCq@?I?IASAg@OuF?OAi@?c@@c@Du@r@cH@U@I@G@K?E~@kJRyBf@uE@KFi@RaBBMFc@Da@@ETaC@QJ{@Ny@Ha@RiAfBuJF]DOh@yAHSf@aADIR_@\\q@w@y@e@a@CCUQaCkB{@y@GESO?_@?C?[IoCIgDMsEAYOkEAQ@Yj@kENg@ZyBBIHm@FY@GBUJk@JmA?c@?QAQG]LKDEDCHOL]FO^uA@GTu@La@\u0060A_DJ[pAgCJSlAwBJSf@{@b@w@dAqBHQZq@LMLKRIFAL?J@HBFBp@XPHh@TTJNFTRNFd@N\\HF@J@J@@V?N@rA@dB",
+            "geometry": "mfp_I__vpAYBO@K@[BuBRgBLK@UBMMC?AAKAe@FyBTC@E?IDKDA@K@]BUBSBA?E@E@A@KFUBK@mAL{CZQ@qBRUBmAFc@@}@Fu@DG?a@B[@qAF_AJ[D_E\u0060@SBO@ODA@UDA?]JC?uBNE?OAKACa@AI]mCCUE[AK[iCWqB[{Bk@sE_@_DAICSAOIm@AIQuACOQyAG[Gc@]wBw@aFKu@y@oFCMAOIm@?KAQ?KIuDQmHE}BBQ?Q?OCq@?I?IASAg@OuF?OAi@?c@@c@Du@r@cH@U@I@G@K?E~@kJRyBf@uE@KFi@RaBBMFc@Da@@ETaC@QJ{@Ny@Ha@RiAfBuJF]DOh@yAHSf@aADIR_@\\q@w@y@e@a@CCUQaCkB{@y@GESO?_@?C?[IoCIgDMsEAYOkEAQ@Yj@kENg@ZyBBIHm@FY@GBUJk@JmA?c@?QAQG]LKDEDCHOL]FO^uA@GTu@La@\u0060A_DJ[pAgCJSlAwBJSf@{@b@w@dAqBHQZq@LMLKRIFAL?J@HBFBp@XPHh@TTJNFTRNFd@N\\HF@J@J@@V?N@rA@dB",
             "weight": 616.2,
             "weight_name": "routability",
             "legs": [
                 {
-                    "distance": 1884.8,
+                    "distance": 1884.7,
                     "duration": 251.5,
                     "weight": 252.7,
                     "summary": "Friedrichstra\u00DFe, Torstra\u00DFe",
                     "steps": [
                         {
-                            "distance": 1135.8,
-                            "duration": 129.1,
-                            "geometry": "mfp_I__vpAYBO@K@[BuBRgBLK@UBMMC?AAKAe@FyBTC@E?IDKDA@K@]BUBSBA?E@E@A@KFUBK@mAL{CZQ@qBRUBmAFc@@}@Fu@DG?a@B[@qAF_AJ[D_E\u0060@SBO@ODA@UDA?]J{BRCA[E",
-                            "weight": 130.3,
+                            "distance": 1135.7,
+                            "duration": 129.2,
+                            "geometry": "mfp_I__vpAYBO@K@[BuBRgBLK@UBMMC?AAKAe@FyBTC@E?IDKDA@K@]BUBSBA?E@E@A@KFUBK@mAL{CZQ@qBRUBmAFc@@}@Fu@DG?a@B[@qAF_AJ[D_E\u0060@SBO@ODA@UDA?]JC?uBNE?OAKA",
+                            "weight": 130.4,
                             "name": "Friedrichstra\u00DFe",
                             "ref": null,
                             "pronunciation": null,
@@ -152,50 +152,12 @@
                                 },
                                 {
                                     "location": [
-                                        13.388392,
-                                        52.51991
-                                    ],
-                                    "bearings": [
-                                        0,
-                                        180
-                                    ],
-                                    "classes": [
-                                        "tunnel"
-                                    ],
-                                    "entry": [
-                                        true,
-                                        false
-                                    ],
-                                    "in": 1,
-                                    "out": 0,
-                                    "lanes": []
-                                },
-                                {
-                                    "location": [
-                                        13.388327,
-                                        52.520283
-                                    ],
-                                    "bearings": [
-                                        0,
-                                        180
-                                    ],
-                                    "classes": [],
-                                    "entry": [
-                                        true,
-                                        false
-                                    ],
-                                    "in": 1,
-                                    "out": 0,
-                                    "lanes": []
-                                },
-                                {
-                                    "location": [
                                         13.388308,
                                         52.520336
                                     ],
                                     "bearings": [
                                         0,
-                                        165,
+                                        180,
                                         270
                                     ],
                                     "classes": [],
@@ -380,9 +342,9 @@
                         },
                         {
                             "distance": 749,
-                            "duration": 122.4,
-                            "geometry": "yer_IcuupACa@AI]mCCUE[AK[iCWqB[{Bk@sE_@_DAICSAOIm@AIQuACOQyAG[Gc@]wBw@aFgAuHAKKo@?K",
-                            "weight": 122.4,
+                            "duration": 122.3,
+                            "geometry": "yer_IcuupACa@AI]mCCUE[AK[iCWqB[{Bk@sE_@_DAICSAOIm@AIQuACOQyAG[Gc@]wBw@aFKu@y@oFCMAOIm@?K",
+                            "weight": 122.3,
                             "name": "Torstra\u00DFe",
                             "ref": null,
                             "pronunciation": null,
@@ -392,7 +354,7 @@
                                     13.387215,
                                     52.527166
                                 ],
-                                "bearing_before": 5,
+                                "bearing_before": 4,
                                 "bearing_after": 71,
                                 "type": "turn",
                                 "modifier": "right",
