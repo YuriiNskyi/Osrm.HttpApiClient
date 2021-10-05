@@ -90,11 +90,17 @@ namespace Osrm.HttpApiClient
             RequestOption.Create("annotations", Annotations.ToLowerInvariant()),
             RequestOption.Create("geometries", Geometries),
             RequestOption.Create("overview", Overview.Value),
-            RequestOption.Create("timestamps", Timestamps.Select(t => t.ToUnixTimeSeconds()).Join(RequestConstants.SemiColon)),
-            RequestOption.Create("radiuses", Radiuses.Join(RequestConstants.SemiColon)),
+            Timestamps.Any()
+                ? RequestOption.Create("timestamps", Timestamps.Select(t => t.ToUnixTimeSeconds()).Join(RequestConstants.SemiColon))
+                : RequestOption.Empty,
+            Radiuses.Any()
+                ? RequestOption.Create("radiuses", Radiuses.Join(RequestConstants.SemiColon))
+                : RequestOption.Empty,
             RequestOption.Create("gaps", Gaps.Value),
             RequestOption.Create("tidy", Tidy.ToLowerInvariant()),
-            RequestOption.Create("waypoints", Waypoints.Join(RequestConstants.SemiColon)),
+            Waypoints.Any() 
+                ? RequestOption.Create("waypoints", Waypoints.Join(RequestConstants.SemiColon)) 
+                : RequestOption.Empty,
         };
     }
 
