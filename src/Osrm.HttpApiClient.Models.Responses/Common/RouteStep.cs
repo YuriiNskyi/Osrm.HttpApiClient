@@ -1,4 +1,5 @@
-﻿using System.Text.Json.Serialization;
+﻿using System;
+using System.Text.Json.Serialization;
 
 namespace Osrm.HttpApiClient
 {
@@ -71,7 +72,7 @@ namespace Osrm.HttpApiClient
         /// A list of Intersection objects that are passed along the segment, the very first belonging to the StepManeuver.
         /// </summary>
         [JsonPropertyName("intersections")]
-        public RouteStepIntersections[] Intersections { get; set; } = null!;
+        public RouteStepIntersections[] Intersections { get; set; } = Array.Empty<RouteStepIntersections>();
 
         /// <summary>
         /// The name for the rotary. Optionally included, if the step is a rotary and a rotary name is available.
