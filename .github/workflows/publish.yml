@@ -13,7 +13,7 @@ jobs:
       with:
         fetch-depth: 0
     - name: Set VERSION variable from tag
-      run: echo "VERSION=1.5.0" >> $GITHUB_ENV
+      run: echo "VERSION=1.6.0" >> $GITHUB_ENV
     - name: Build
       run: dotnet build --configuration Release
     - name: Pack
