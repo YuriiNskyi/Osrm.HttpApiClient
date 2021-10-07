@@ -10,6 +10,7 @@ namespace Osrm.HttpApiClient
     public abstract record TripRequest<TGeometry> : CommonGeometryRequest<TGeometry>
         where TGeometry : Geometry
     {
+        private RouteAnnotations _annotations = RouteAnnotations.False;
         private Overview _overview = Overview.Simplified;
         private SourceCoordinate _source = SourceCoordinate.Any;
         private DestinationCoordinate _destination = DestinationCoordinate.Any;
@@ -50,7 +51,11 @@ namespace Osrm.HttpApiClient
         /// <summary>
         /// Returns additional metadata for each coordinate along the route geometry.
         /// </summary>
-        public bool Annotations { get; set; }
+        public RouteAnnotations Annotations 
+        {
+            get => _annotations;
+            set => _annotations = value ?? RouteAnnotations.False;
+        }
 
         /// <summary>
         /// Add overview geometry either full, simplified according to highest zoom level it could be display on, or not at all.
@@ -89,7 +94,7 @@ namespace Osrm.HttpApiClient
             RequestOption.Create("source", Source.Value),
             RequestOption.Create("destination", Destination.Value),
             RequestOption.Create("steps", Steps.ToLowerInvariant()),
-            RequestOption.Create("annotations", Annotations.ToLowerInvariant()),
+            RequestOption.Create("annotations", Annotations.Value),
             RequestOption.Create("geometries", Geometries),
             RequestOption.Create("overview", Overview.Value),
         };

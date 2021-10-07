@@ -10,6 +10,8 @@ namespace Osrm.HttpApiClient
     public abstract record RouteRequest<TGeometry> : CommonGeometryRequest<TGeometry>
         where TGeometry : Geometry
     {
+        private Alternatives _alternatives = Alternatives.False;
+        private RouteAnnotations _annotations = RouteAnnotations.False;
         private Overview _overview = Overview.Simplified;
         private ContinueStraight _continueStraight = ContinueStraight.Default;
         private IReadOnlyCollection<int> _waypoints = Array.Empty<int>();
@@ -20,20 +22,28 @@ namespace Osrm.HttpApiClient
         }
 
         /// <summary>
-        /// Search for alternative routes and return as well.
-        /// Please note that even if an alternative route is requested, a result cannot be guaranteed.
+        /// Search for alternative routes.
+        /// Passing a number alternatives= n searches for up to n alternative routes.
         /// </summary>
-        public bool Alternatives { get; set; }
+        public Alternatives Alternatives 
+        {
+            get => _alternatives;
+            set => _alternatives = value ?? Alternatives.False;
+        }
 
         /// <summary>
         /// Return route steps for each route leg.
         /// </summary>
-        public bool Steps { get; set; }
+        public bool Steps { get; set; } = false;
 
         /// <summary>
         /// Returns additional metadata for each coordinate along the route geometry.
         /// </summary>
-        public bool Annotations { get; set; }
+        public RouteAnnotations Annotations 
+        {
+            get => _annotations;
+            set => _annotations = value ?? RouteAnnotations.False;
+        }
 
         /// <summary>
         /// Add overview geometry either full, simplified according to highest zoom level it could be display on, or not at all.
@@ -66,9 +76,9 @@ namespace Osrm.HttpApiClient
 
         public override IReadOnlyCollection<RequestOption> AdditionalOptions => new[]
         {
-            RequestOption.Create("alternatives", Alternatives.ToLowerInvariant()),
+            RequestOption.Create("alternatives", Alternatives.Value),
             RequestOption.Create("steps", Steps.ToLowerInvariant()),
-            RequestOption.Create("annotations", Annotations.ToLowerInvariant()),
+            RequestOption.Create("annotations", Annotations.Value),
             RequestOption.Create("geometries", Geometries),
             RequestOption.Create("overview", Overview.Value),
             RequestOption.Create("continue_straight", ContinueStraight.Value),

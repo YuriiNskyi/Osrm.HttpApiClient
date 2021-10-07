@@ -36,9 +36,9 @@ namespace Osrm.HttpApiClient
         /// </summary>
         /// <returns>Current builder.</returns>
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
-        public MatchRequestBuilder<TGeometry> ReturnAnnotations()
+        public MatchRequestBuilder<TGeometry> Annotations(RouteAnnotations annotations)
         {
-            Request.Annotations = true;
+            Request.Annotations = annotations;
 
             return this;
         }

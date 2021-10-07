@@ -49,7 +49,7 @@ namespace Osrm.HttpApiClient
         /// <param name="annotations">Annotations.</param>
         /// <returns>Current builder.</returns>
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
-        public TableRequestBuilder Annotations(Annotations annotations)
+        public TableRequestBuilder Annotations(TableAnnotations annotations)
         {
             Request.Annotations = annotations;
 

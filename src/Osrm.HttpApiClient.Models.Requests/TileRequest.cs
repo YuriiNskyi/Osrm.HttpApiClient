@@ -49,7 +49,8 @@
         public int Y { get; }
 
         /// <summary>
-        /// The zoom parameter is an integer between 0 (zoomed out) and 18 (zoomed in). 18 is normally the maximum, but some tile servers might go beyond that.
+        /// The zoom parameter is an integer between 0 (zoomed out) and 18 (zoomed in).
+        /// 18 is normally the maximum, but some tile servers might go beyond that.
         /// </summary>
         public int Zoom { get; }
 

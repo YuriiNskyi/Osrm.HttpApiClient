@@ -23,9 +23,9 @@ namespace Osrm.HttpApiClient
         /// </summary>
         /// <returns>Current builder.</returns>
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
-        public RouteRequestBuilder<TGeometry> ReturnAlternatives()
+        public RouteRequestBuilder<TGeometry> Alternatives(Alternatives alternatives)
         {
-            Request.Alternatives = true;
+            Request.Alternatives = alternatives;
 
             return this;
         }
@@ -47,9 +47,9 @@ namespace Osrm.HttpApiClient
         /// </summary>
         /// <returns>Current builder.</returns>
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
-        public RouteRequestBuilder<TGeometry> ReturnAnnotations()
+        public RouteRequestBuilder<TGeometry> Annotations(RouteAnnotations annotations)
         {
-            Request.Annotations = true;
+            Request.Annotations = annotations;
 
             return this;
         }

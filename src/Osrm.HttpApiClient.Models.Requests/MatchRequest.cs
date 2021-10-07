@@ -14,6 +14,7 @@ namespace Osrm.HttpApiClient
     public abstract record MatchRequest<TGeometry> : CommonGeometryRequest<TGeometry>
         where TGeometry : Geometry
     {
+        private RouteAnnotations _annotations = RouteAnnotations.False;
         private Overview _overview = Overview.Simplified;
         private IReadOnlyCollection<DateTimeOffset> _timestamps = Array.Empty<DateTimeOffset>();
         private IReadOnlyCollection<double> _radiuses = Array.Empty<double>();
@@ -33,7 +34,11 @@ namespace Osrm.HttpApiClient
         /// <summary>
         /// Returns additional metadata for each coordinate along the route geometry.
         /// </summary>
-        public bool Annotations { get; set; }
+        public RouteAnnotations Annotations 
+        {
+            get => _annotations;
+            set => _annotations = value ?? RouteAnnotations.False;
+        }
 
         /// <summary>
         /// Add overview geometry either full, simplified according to highest zoom level it could be display on, or not at all.
@@ -87,14 +92,14 @@ namespace Osrm.HttpApiClient
         public override IReadOnlyCollection<RequestOption> AdditionalOptions => new[]
         {
             RequestOption.Create("steps", Steps.ToLowerInvariant()),
-            RequestOption.Create("annotations", Annotations.ToLowerInvariant()),
+            RequestOption.Create("annotations", Annotations.Value),
             RequestOption.Create("geometries", Geometries),
             RequestOption.Create("overview", Overview.Value),
             Timestamps.Any()
                 ? RequestOption.Create("timestamps", Timestamps.Select(t => t.ToUnixTimeSeconds()).Join(RequestConstants.SemiColon))
                 : RequestOption.Empty,
             Radiuses.Any()
-                ? RequestOption.Create("radiuses", Radiuses.Join(RequestConstants.SemiColon))
+                ? RequestOption.Create("radiuses", Radiuses.Select(x => x.InvariantCulture()).Join(RequestConstants.SemiColon))
                 : RequestOption.Empty,
             RequestOption.Create("gaps", Gaps.Value),
             RequestOption.Create("tidy", Tidy.ToLowerInvariant()),

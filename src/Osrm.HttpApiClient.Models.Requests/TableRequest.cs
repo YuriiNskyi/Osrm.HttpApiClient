@@ -14,7 +14,7 @@ namespace Osrm.HttpApiClient
     {
         private IReadOnlyCollection<int> _sources = Array.Empty<int>();
         private IReadOnlyCollection<int> _destinations = Array.Empty<int>();
-        private Annotations _annotations = Annotations.Duration;
+        private TableAnnotations _annotations = TableAnnotations.Duration;
         private FallbackCoordinate _fallbackCoordinate = FallbackCoordinate.Input;
         private double? _scaleFactor = null;
         private double? _fallbackSpeed = null;
@@ -45,10 +45,10 @@ namespace Osrm.HttpApiClient
         /// <summary>
         /// Return the requested table or tables in response.
         /// </summary>
-        public Annotations Annotations
+        public TableAnnotations Annotations
         {
             get => _annotations;
-            set => _annotations = value ?? Annotations.Duration;
+            set => _annotations = value ?? TableAnnotations.Duration;
         }
 
         /// <summary>

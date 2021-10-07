@@ -13,7 +13,9 @@ namespace Osrm.HttpApiClient
 
         protected CommonRequest(string profile, Coordinates coordinates)
         {
-            Profile = profile ?? PredefinedProfiles.Car;
+            Profile = string.IsNullOrWhiteSpace(profile) 
+                ? PredefinedProfiles.Car
+                : profile;
             Coordinates = coordinates;
         }
 
@@ -86,7 +88,7 @@ namespace Osrm.HttpApiClient
                     })
                     .Where(o => o.HasValue)
                     .Select(o => o.ToString())
-                    .Join('&');
+                    .Join(RequestConstants.Ampersand);
 
                 var requestUri = $"{Service}/{Version}/{Profile}/{Coordinates.Value}?{options}";
 

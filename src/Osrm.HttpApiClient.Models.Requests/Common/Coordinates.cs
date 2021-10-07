@@ -25,21 +25,50 @@ namespace Osrm.HttpApiClient
         }
 
         public override string Value
-            => Coordinates.Select(c => $"{c.Longitude.InvariantCulture()},{c.Latitude.InvariantCulture()}").Join(RequestConstants.SemiColon);
+            => Coordinates
+                .Select(c => $"{c.Longitude.InvariantCulture()},{c.Latitude.InvariantCulture()}")
+                .Join(RequestConstants.SemiColon);
 
         public override IReadOnlyCollection<RequestOption> Options => new[]
         {
             Coordinates.Any(c => c.Bearing is not null) 
-                ? RequestOption.Create("bearings", Coordinates.Select(c => c.Bearing is null ? string.Empty : $"{c.Bearing.Value},{c.Bearing.Range}").Join(RequestConstants.SemiColon))
+                ? RequestOption.Create(
+                    "bearings",
+                    Coordinates
+                        .Select(c => c.Bearing is null 
+                            ? string.Empty 
+                            : $"{c.Bearing.Value.InvariantCulture()},{c.Bearing.Range.InvariantCulture()}")
+                        .Join(RequestConstants.SemiColon))
                 : RequestOption.Empty,
+
             Coordinates.Any(c => c.Radius.HasValue) 
-                ? RequestOption.Create("radiuses", Coordinates.Select(c => c.Radius.HasValue ? c.Radius.Value.ToString() : "unlimited").Join(RequestConstants.SemiColon))
+                ? RequestOption.Create(
+                    "radiuses",
+                    Coordinates
+                        .Select(c => c.Radius.HasValue 
+                            ? c.Radius.Value.InvariantCulture() 
+                            : "unlimited")
+                        .Join(RequestConstants.SemiColon))
                 : RequestOption.Empty,
+
             Coordinates.Any(c => c.Hint is not null)
-                ? RequestOption.Create("hints", Coordinates.Select(c => c.Hint ?? string.Empty).Join(RequestConstants.SemiColon))
+                ? RequestOption.Create(
+                    "hints",
+                    Coordinates
+                        .Select(c => string.IsNullOrWhiteSpace(c.Hint)
+                            ? string.Empty
+                            : c.Hint)
+                        .Join(RequestConstants.SemiColon))
                 : RequestOption.Empty,
+
             Coordinates.Any(c => c.Approach is not null) 
-                ? RequestOption.Create("approaches", Coordinates.Select(c => c.Approach is null ? Approach.Unrestricted.Value : c.Approach.Value).Join(RequestConstants.SemiColon))
+                ? RequestOption.Create(
+                    "approaches",
+                    Coordinates
+                        .Select(c => c.Approach is null 
+                            ? Approach.Unrestricted.Value 
+                            : c.Approach.Value)
+                        .Join(RequestConstants.SemiColon))
                 : RequestOption.Empty,
         };
 
