@@ -5,10 +5,12 @@ namespace Osrm.HttpApiClient
     /// <summary>
     /// Fluent way to build Nearest requests.
     /// </summary>
-    public class NearestRequestBuilder : CommonRequestBuilder<NearestRequest, NearestRequestBuilder>
+    public class NearestRequestBuilder<TFormat>
+        : CommonRequestBuilder<NearestRequest<TFormat>, NearestRequestBuilder<TFormat>, TFormat>
+        where TFormat : struct, IFormat
     {
         public NearestRequestBuilder(string profile, Coordinate coordinate)
-            : base(new NearestRequest(profile, coordinate))
+            : base(new NearestRequest<TFormat>(profile, coordinate))
         {
         }
 
@@ -18,7 +20,7 @@ namespace Osrm.HttpApiClient
         /// <param name="nearestSegments">Nearest segments.</param>
         /// <returns>Current builder.</returns>
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
-        public NearestRequestBuilder NearestSegments(int nearestSegments)
+        public NearestRequestBuilder<TFormat> NearestSegments(int nearestSegments)
         {
             Request.NearestSegments = nearestSegments;
 

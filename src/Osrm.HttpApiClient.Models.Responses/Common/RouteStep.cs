@@ -52,9 +52,17 @@ namespace Osrm.HttpApiClient
         [JsonPropertyName("pronunciation")]
         public string Pronunciation { get; set; } = null!;
 
-        //public int Destinations { get; set; }
+        /// <summary>
+        /// The destinations of the way. Will be undefined if there are no destinations.
+        /// </summary>
+        [JsonPropertyName("destinations")]
+        public string Destinations { get; set; } = "undefined";
 
-        //public int Exits { get; set; }
+        /// <summary>
+        /// The exit numbers or names of the way. Will be undefined if there are no exit numbers or names.
+        /// </summary>
+        [JsonPropertyName("exits")]
+        public string Exits { get; set; } = "undefined";
 
         /// <summary>
         /// A string signifying the mode of transportation.

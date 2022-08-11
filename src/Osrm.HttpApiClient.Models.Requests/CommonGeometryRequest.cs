@@ -1,7 +1,8 @@
 ﻿namespace Osrm.HttpApiClient
 {
-    public abstract record CommonGeometryRequest<TGeometry> : CommonRequest
+    public abstract record CommonGeometryRequest<TGeometry, TFormat> : CommonRequest<TFormat>
         where TGeometry : Geometry
+        where TFormat : struct, IFormat
     {
         protected CommonGeometryRequest(string profile, Coordinates coordinates)
             : base(profile, coordinates)

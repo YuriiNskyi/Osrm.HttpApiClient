@@ -7,8 +7,9 @@ namespace Osrm.HttpApiClient
     /// The returned path does not have to be the fastest path.
     /// As TSP is NP-hard it only returns an approximation. Note that all input coordinates have to be connected for the trip service to work.
     /// </summary>
-    public abstract record TripRequest<TGeometry> : CommonGeometryRequest<TGeometry>
+    public abstract record TripRequest<TGeometry, TFormat> : CommonGeometryRequest<TGeometry, TFormat>
         where TGeometry : Geometry
+        where TFormat : struct, IFormat
     {
         private RouteAnnotations _annotations = RouteAnnotations.False;
         private Overview _overview = Overview.Simplified;
@@ -66,7 +67,7 @@ namespace Osrm.HttpApiClient
             set => _overview = value ?? Overview.Simplified;
         }
 
-        public TripRequest<TGeometry> WithRoundTrip(
+        public TripRequest<TGeometry, TFormat> WithRoundTrip(
             SourceCoordinate source,
             DestinationCoordinate destination)
         {
@@ -77,7 +78,7 @@ namespace Osrm.HttpApiClient
             return this;
         }
 
-        public TripRequest<TGeometry> WithoutRoundtrip()
+        public TripRequest<TGeometry, TFormat> WithoutRoundtrip()
         {
             Roundtrip = false;
             Source = SourceCoordinate.First;
@@ -100,7 +101,8 @@ namespace Osrm.HttpApiClient
         };
     }
 
-    public record PolylineTripRequest : TripRequest<PolylineGeometry>
+    public record PolylineTripRequest<TFormat> : TripRequest<PolylineGeometry, TFormat>
+        where TFormat : struct, IFormat
     {
         public PolylineTripRequest(string profile, Coordinates coordinates)
             : base(profile, coordinates)
@@ -110,7 +112,8 @@ namespace Osrm.HttpApiClient
         public override string Geometries => PolylineGeometry.Name;
     }
 
-    public record Polyline6TripRequest : TripRequest<Polyline6Geometry>
+    public record Polyline6TripRequest<TFormat> : TripRequest<Polyline6Geometry, TFormat>
+        where TFormat : struct, IFormat
     {
         public Polyline6TripRequest(string profile, Coordinates coordinates)
             : base(profile, coordinates)
@@ -120,7 +123,8 @@ namespace Osrm.HttpApiClient
         public override string Geometries => Polyline6Geometry.Name;
     }
 
-    public record GeoJsonTripRequest : TripRequest<GeoJsonGeometry>
+    public record GeoJsonTripRequest<TFormat> : TripRequest<GeoJsonGeometry, TFormat>
+        where TFormat : struct, IFormat
     {
         public GeoJsonTripRequest(string profile, Coordinates coordinates)
             : base(profile, coordinates)

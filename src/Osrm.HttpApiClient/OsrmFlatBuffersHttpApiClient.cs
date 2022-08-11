@@ -1,30 +1,20 @@
 ﻿using System;
 using System.Net.Http;
 using System.Runtime.CompilerServices;
-using System.Text.Json;
 using System.Threading;
 using System.Threading.Tasks;
 
 namespace Osrm.HttpApiClient
 {
-    public class OsrmHttpApiClient
+    public class OsrmFlatBuffersHttpApiClient
     {
-        public static readonly JsonSerializerOptions DefaultJsonSerializerOptions = OsrmStaticHttpApiClient.DefaultJsonSerializerOptions;
-
         private readonly HttpClient _httpClient;
-        private JsonSerializerOptions _jsonSerializerOptions = DefaultJsonSerializerOptions;
-
-        public JsonSerializerOptions JsonSerializerOptions 
-        {
-            get => _jsonSerializerOptions;
-            set => _jsonSerializerOptions = value ?? DefaultJsonSerializerOptions;
-        }
 
         /// <summary>
         /// Ctor.
         /// </summary>
         /// <param name="httpClient">Htpp client with already predefined BaseAddress.</param>
-        public OsrmHttpApiClient(HttpClient httpClient)
+        public OsrmFlatBuffersHttpApiClient(HttpClient httpClient)
         {
             _httpClient = httpClient ?? throw new ArgumentNullException(nameof(httpClient));
         }
@@ -36,14 +26,13 @@ namespace Osrm.HttpApiClient
         /// <param name="cancellationToken">Cancellation token.</param>
         /// <returns>Nearest response.</returns>
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
-        public Task<NearestResponse> GetNearestAsync(
-            NearestRequest<JsonFormat> request,
+        public Task<FBResult> GetNearestAsync(
+            NearestRequest<FlatBuffersFormat> request,
             CancellationToken cancellationToken = default)
-            => OsrmStaticHttpApiClient.GetNearestAsync(
+            => OsrmFlatBuffersStaticHttpApiClient.GetNearestAsync(
                 null,
                 _httpClient,
                 request,
-                _jsonSerializerOptions,
                 cancellationToken);
 
         /// <summary>
@@ -54,15 +43,14 @@ namespace Osrm.HttpApiClient
         /// <param name="cancellationToken">Cancellation token.</param>
         /// <returns>Route response specified by Geometry.</returns>
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
-        public Task<RouteResponse<TGeometry>> GetRouteAsync<TGeometry>(
-            RouteRequest<TGeometry, JsonFormat> request,
+        public Task<FBResult> GetRouteAsync<TGeometry>(
+            RouteRequest<TGeometry, FlatBuffersFormat> request,
             CancellationToken cancellationToken = default)
             where TGeometry : Geometry
-            => OsrmStaticHttpApiClient.GetRouteAsync(
+            => OsrmFlatBuffersStaticHttpApiClient.GetRouteAsync(
                 null,
                 _httpClient,
                 request,
-                _jsonSerializerOptions,
                 cancellationToken);
 
         /// <summary>
@@ -72,14 +60,13 @@ namespace Osrm.HttpApiClient
         /// <param name="cancellationToken">Cancellation token.</param>
         /// <returns>Table response.</returns>
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
-        public Task<TableResponse> GetTableAsync(
-            TableRequest<JsonFormat> request,
+        public Task<FBResult> GetTableAsync(
+            TableRequest<FlatBuffersFormat> request,
             CancellationToken cancellationToken = default)
-            => OsrmStaticHttpApiClient.GetTableAsync(
+            => OsrmFlatBuffersStaticHttpApiClient.GetTableAsync(
                 null,
                 _httpClient,
                 request,
-                _jsonSerializerOptions,
                 cancellationToken);
 
         /// <summary>
@@ -90,15 +77,14 @@ namespace Osrm.HttpApiClient
         /// <param name="cancellationToken">Cancellation token.</param>
         /// <returns>Match response specified by Geometry.</returns>
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
-        public Task<MatchResponse<TGeometry>> GetMatchAsync<TGeometry>(
-            MatchRequest<TGeometry, JsonFormat> request,
+        public Task<FBResult> GetMatchAsync<TGeometry>(
+            MatchRequest<TGeometry, FlatBuffersFormat> request,
             CancellationToken cancellationToken = default)
             where TGeometry : Geometry
-            => OsrmStaticHttpApiClient.GetMatchAsync(
+            => OsrmFlatBuffersStaticHttpApiClient.GetMatchAsync(
                 null,
                 _httpClient,
                 request,
-                _jsonSerializerOptions,
                 cancellationToken);
 
         /// <summary>
@@ -109,28 +95,11 @@ namespace Osrm.HttpApiClient
         /// <param name="cancellationToken">Cancellation token.</param>
         /// <returns>Trip response specified by Geometry.</returns>
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
-        public Task<TripResponse<TGeometry>> GetTripAsync<TGeometry>(
-            TripRequest<TGeometry, JsonFormat> request,
+        public Task<FBResult> GetTripAsync<TGeometry>(
+            TripRequest<TGeometry, FlatBuffersFormat> request,
             CancellationToken cancellationToken = default)
             where TGeometry : Geometry
-            => OsrmStaticHttpApiClient.GetTripAsync(
-                null,
-                _httpClient,
-                request,
-                _jsonSerializerOptions,
-                cancellationToken);
-
-        /// <summary>
-        /// This service generates Mapbox Vector Tiles that can be viewed with a vector-tile capable slippy-map viewer.
-        /// </summary>
-        /// <param name="request">Tile request.</param>
-        /// <param name="cancellationToken">Cancellation token.</param>
-        /// <returns>Tile response.</returns>
-        [MethodImpl(MethodImplOptions.AggressiveInlining)]
-        public Task<TileResponse> GetTileAsync(
-            TileRequest request,
-            CancellationToken cancellationToken = default)
-            => OsrmStaticHttpApiClient.GetTileAsync(
+            => OsrmFlatBuffersStaticHttpApiClient.GetTripAsync(
                 null,
                 _httpClient,
                 request,

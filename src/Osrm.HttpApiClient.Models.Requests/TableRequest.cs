@@ -10,7 +10,8 @@ namespace Osrm.HttpApiClient
     /// Note that the distances are not the shortest distance between two coordinates, but rather the distances of the fastest routes.
     /// Duration is in seconds and distances is in meters.
     /// </summary>
-    public record TableRequest : CommonRequest
+    public record TableRequest<TFormat> : CommonRequest<TFormat>
+        where TFormat : struct, IFormat
     {
         private IReadOnlyCollection<int> _sources = Array.Empty<int>();
         private IReadOnlyCollection<int> _destinations = Array.Empty<int>();

@@ -7,8 +7,9 @@ namespace Osrm.HttpApiClient
     /// <summary>
     /// Finds the fastest route between coordinates in the supplied order.
     /// </summary>
-    public abstract record RouteRequest<TGeometry> : CommonGeometryRequest<TGeometry>
+    public abstract record RouteRequest<TGeometry, TFormat> : CommonGeometryRequest<TGeometry, TFormat>
         where TGeometry : Geometry
+        where TFormat : struct, IFormat
     {
         private Alternatives _alternatives = Alternatives.False;
         private RouteAnnotations _annotations = RouteAnnotations.False;
@@ -88,7 +89,8 @@ namespace Osrm.HttpApiClient
         };
     }
 
-    public record PolylineRouteRequest : RouteRequest<PolylineGeometry>
+    public record PolylineRouteRequest<TFormat> : RouteRequest<PolylineGeometry, TFormat>
+        where TFormat : struct, IFormat
     {
         public PolylineRouteRequest(string profile, Coordinates coordinates)
             : base(profile, coordinates)
@@ -98,7 +100,8 @@ namespace Osrm.HttpApiClient
         public override string Geometries => PolylineGeometry.Name;
     }
 
-    public record Polyline6RouteRequest : RouteRequest<Polyline6Geometry>
+    public record Polyline6RouteRequest<TFormat> : RouteRequest<Polyline6Geometry, TFormat>
+        where TFormat : struct, IFormat
     {
         public Polyline6RouteRequest(string profile, Coordinates coordinates)
             : base(profile, coordinates)
@@ -108,7 +111,8 @@ namespace Osrm.HttpApiClient
         public override string Geometries => Polyline6Geometry.Name;
     }
 
-    public record GeoJsonRouteRequest : RouteRequest<GeoJsonGeometry>
+    public record GeoJsonRouteRequest<TFormat> : RouteRequest<GeoJsonGeometry, TFormat>
+        where TFormat : struct, IFormat
     {
         public GeoJsonRouteRequest(string profile, Coordinates coordinates)
             : base(profile, coordinates)

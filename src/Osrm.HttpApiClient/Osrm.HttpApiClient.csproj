@@ -3,32 +3,32 @@
   <PropertyGroup>
     <TargetFramework>net5.0</TargetFramework>
     <Nullable>enable</Nullable>
-    <PackageVersion>1.7.0</PackageVersion>
+    <PackageVersion>1.8.0</PackageVersion>
     <PackageId>Osrm.HttpApiClient</PackageId>
     <Title>Osrm.HttpApiClient</Title>
     <Authors>Yurii Naurynskyi</Authors>
     <Summary>HTTP API client for OSRM server</Summary>
     <Copyright>Copyright (c) Yurii Naurynskyi. All rights reserved.</Copyright>
-    <Description>Simple HTTP API client for OSRM server.</Description>
+    <Description>Simple HTTP API client for OSRM server. Supports FlatBuffers as well.</Description>
     <PackageTags>C#, OSRM, REST, API, HTTP, Client</PackageTags>
     <PackageProjectUrl>https://github.com/YuriiNskyi/Osrm.HttpApiClient</PackageProjectUrl>
-    <Version>1.7.0.0</Version>
-    <AssemblyVersion>1.7.0.0</AssemblyVersion>
-    <FileVersion>1.7.0.0</FileVersion>
+    <Version>1.8.0.0</Version>
+    <AssemblyVersion>1.8.0.0</AssemblyVersion>
+    <FileVersion>1.8.0.0</FileVersion>
     <RepositoryUrl>https://github.com/YuriiNskyi/Osrm.HttpApiClient</RepositoryUrl>
     <PackageLicenseUrl>https://github.com/YuriiNskyi/Osrm.HttpApiClient/blob/main/LICENSE</PackageLicenseUrl>
     <TargetsForTfmSpecificBuildOutput>$(TargetsForTfmSpecificBuildOutput);CopyProjectReferencesToPackage</TargetsForTfmSpecificBuildOutput>
   </PropertyGroup>
 
   <ItemGroup>
-    <ProjectReference Include="..\Osrm.HttpApiClient.Models.Common\Osrm.HttpApiClient.Models.Common.csproj" PrivateAssets="all"/>
-    <ProjectReference Include="..\Osrm.HttpApiClient.Models.Requests\Osrm.HttpApiClient.Models.Requests.csproj" PrivateAssets="all"/>
-    <ProjectReference Include="..\Osrm.HttpApiClient.Models.Responses\Osrm.HttpApiClient.Models.Responses.csproj" PrivateAssets="all"/>
+    <ProjectReference Include="..\Osrm.HttpApiClient.Models.Common\Osrm.HttpApiClient.Models.Common.csproj" PrivateAssets="all" />
+    <ProjectReference Include="..\Osrm.HttpApiClient.Models.Requests\Osrm.HttpApiClient.Models.Requests.csproj" PrivateAssets="all" />
+    <ProjectReference Include="..\Osrm.HttpApiClient.Models.Responses\Osrm.HttpApiClient.Models.Responses.csproj" PrivateAssets="all" />
   </ItemGroup>
 
   <Target Name="CopyProjectReferencesToPackage" DependsOnTargets="ResolveReferences">
     <ItemGroup>
-      <BuildOutputInPackage Include="@(ReferenceCopyLocalPaths->WithMetadataValue('ReferenceSourceTarget', 'ProjectReference'))" />
+      <BuildOutputInPackage Include="@(ReferenceCopyLocalPaths-&gt;WithMetadataValue('ReferenceSourceTarget', 'ProjectReference'))" />
     </ItemGroup>
   </Target>
 

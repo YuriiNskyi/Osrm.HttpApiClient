@@ -6,12 +6,15 @@ using System.Linq;
 namespace Osrm.HttpApiClient
 {
     [DebuggerDisplay("{Uri, nq}")]
-    public abstract record CommonRequest : IOsrmRequest
+    public abstract record CommonRequest<TFormat> : IOsrmRequest
+        where TFormat : struct, IFormat
     {
         private IReadOnlyCollection<ClassName> _exclude = Array.Empty<ClassName>();
         private Snapping _snapping = Snapping.Default;
 
-        protected CommonRequest(string profile, Coordinates coordinates)
+        protected CommonRequest(
+            string profile,
+            Coordinates coordinates)
         {
             Profile = string.IsNullOrWhiteSpace(profile) 
                 ? PredefinedProfiles.Car
@@ -69,6 +72,8 @@ namespace Osrm.HttpApiClient
         /// </summary>
         public bool SkipWaypoints { get; set; } = false;
 
+        public TFormat Format { get; } = default;
+
         public virtual IReadOnlyCollection<RequestOption> AdditionalOptions { get; } = Array.Empty<RequestOption>();
 
         public string Uri
@@ -77,20 +82,17 @@ namespace Osrm.HttpApiClient
             {
                 var options = Coordinates.Options
                     .Concat(AdditionalOptions)
-                    .Concat(new[]
-                    {
-                        RequestOption.Create("generate_hints", GenerateHints.ToLowerInvariant()),
-                        Exclude.Any()
-                            ? RequestOption.Create("exclude", Exclude.Select(e => e.Value).Join(RequestConstants.Comma))
-                            : RequestOption.Empty,
-                        RequestOption.Create("snapping", Snapping.Value),
-                        RequestOption.Create("skip_waypoints", SkipWaypoints.ToLowerInvariant()),
-                    })
+                    .Append(RequestOption.Create("generate_hints", GenerateHints.ToLowerInvariant()))
+                    .Append(Exclude.Any()
+                        ? RequestOption.Create("exclude", Exclude.Select(e => e.Value).Join(RequestConstants.Comma))
+                        : RequestOption.Empty)
+                    .Append(RequestOption.Create("snapping", Snapping.Value))
+                    .Append(RequestOption.Create("skip_waypoints", SkipWaypoints.ToLowerInvariant()))
                     .Where(o => o.HasValue)
                     .Select(o => o.ToString())
                     .Join(RequestConstants.Ampersand);
 
-                var requestUri = $"{Service}/{Version}/{Profile}/{Coordinates.Value}?{options}";
+                var requestUri = $"{Service}/{Version}/{Profile}/{Coordinates.Value}.{Format.Value}?{options}";
 
                 return requestUri;
             }

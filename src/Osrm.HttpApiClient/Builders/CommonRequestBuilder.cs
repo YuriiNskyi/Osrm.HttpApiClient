@@ -7,9 +7,10 @@ namespace Osrm.HttpApiClient
     /// </summary>
     /// <typeparam name="TRequest">Common request.</typeparam>
     /// <typeparam name="TBuilder">Common request builder.</typeparam>
-    public abstract class CommonRequestBuilder<TRequest, TBuilder>
-        where TRequest : CommonRequest
-        where TBuilder : CommonRequestBuilder<TRequest, TBuilder>
+    public abstract class CommonRequestBuilder<TRequest, TBuilder, TFormat>
+        where TRequest : CommonRequest<TFormat>
+        where TBuilder : CommonRequestBuilder<TRequest, TBuilder, TFormat>
+        where TFormat : struct, IFormat
     {
         protected readonly TRequest Request;
 

@@ -11,8 +11,9 @@ namespace Osrm.HttpApiClient
     /// The algorithm might not be able to match all points.
     /// Outliers are removed if they can not be matched successfully.
     /// </summary>
-    public abstract record MatchRequest<TGeometry> : CommonGeometryRequest<TGeometry>
+    public abstract record MatchRequest<TGeometry, TFormat> : CommonGeometryRequest<TGeometry, TFormat>
         where TGeometry : Geometry
+        where TFormat : struct, IFormat
     {
         private RouteAnnotations _annotations = RouteAnnotations.False;
         private Overview _overview = Overview.Simplified;
@@ -109,7 +110,8 @@ namespace Osrm.HttpApiClient
         };
     }
 
-    public record PolylineMatchRequest : MatchRequest<PolylineGeometry>
+    public record PolylineMatchRequest<TFormat> : MatchRequest<PolylineGeometry, TFormat>
+        where TFormat : struct, IFormat
     {
         public PolylineMatchRequest(string profile, Coordinates coordinates)
             : base(profile, coordinates)
@@ -119,7 +121,8 @@ namespace Osrm.HttpApiClient
         public override string Geometries => PolylineGeometry.Name;
     }
 
-    public record Polyline6MatchRequest : MatchRequest<Polyline6Geometry>
+    public record Polyline6MatchRequest<TFormat> : MatchRequest<Polyline6Geometry, TFormat>
+        where TFormat : struct, IFormat
     {
         public Polyline6MatchRequest(string profile, Coordinates coordinates)
             : base(profile, coordinates)
@@ -129,7 +132,8 @@ namespace Osrm.HttpApiClient
         public override string Geometries => Polyline6Geometry.Name;
     }
 
-    public record GeoJsonMatchRequest : MatchRequest<GeoJsonGeometry>
+    public record GeoJsonMatchRequest<TFormat> : MatchRequest<GeoJsonGeometry, TFormat>
+        where TFormat : struct, IFormat
     {
         public GeoJsonMatchRequest(string profile, Coordinates coordinates)
             : base(profile, coordinates)

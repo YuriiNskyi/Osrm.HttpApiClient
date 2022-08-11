@@ -1,45 +1,31 @@
 ﻿using System.Net.Http;
 using System.Runtime.CompilerServices;
-using System.Text.Json;
-using System.Text.Json.Serialization;
 using System.Threading;
 using System.Threading.Tasks;
+using FlatSharp;
 
 namespace Osrm.HttpApiClient
 {
-    public static class OsrmStaticHttpApiClient
+    public static class OsrmFlatBuffersStaticHttpApiClient
     {
-        public static readonly JsonSerializerOptions DefaultJsonSerializerOptions = new()
-        {
-            Converters =
-            {
-                new JsonStringEnumConverter(),
-                new PolylineGeometryConverter(),
-                new Polyline6GeometryConverter(),
-            }
-        };
-
         /// <summary>
         /// Snaps a coordinate to the street network and returns the nearest n matches.
         /// </summary>
         /// <param name="baseAddress">Base address for the OSRM backend.</param>
         /// <param name="httpClient">Http client which is responsible for sending actual request.</param>
         /// <param name="request">Nearest request.</param>
-        /// <param name="jsonSerializerOptions">JSON serializer options for response.</param>
         /// <param name="cancellationToken">Cancellation token.</param>
         /// <returns>Nearest response.</returns>
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
-        public static Task<NearestResponse> GetNearestAsync(
+        public static Task<FBResult> GetNearestAsync(
             string? baseAddress,
             HttpClient httpClient,
-            NearestRequest<JsonFormat> request,
-            JsonSerializerOptions? jsonSerializerOptions = null,
+            NearestRequest<FlatBuffersFormat> request,
             CancellationToken cancellationToken = default)
-            => MakeRequestAsync<NearestRequest<JsonFormat>, NearestResponse>(
+            => MakeRequestAsync(
                 baseAddress,
                 httpClient,
                 request,
-                jsonSerializerOptions,
                 cancellationToken);
 
         /// <summary>
@@ -49,22 +35,19 @@ namespace Osrm.HttpApiClient
         /// <param name="baseAddress">Base address for the OSRM backend.</param>
         /// <param name="httpClient">Http client which is responsible for sending actual request.</param>
         /// <param name="request">Route request specified by Geometry.</param>
-        /// <param name="jsonSerializerOptions">JSON serializer options for response.</param>
         /// <param name="cancellationToken">Cancellation token.</param>
         /// <returns>Route response specified by Geometry.</returns>
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
-        public static Task<RouteResponse<TGeometry>> GetRouteAsync<TGeometry>(
+        public static Task<FBResult> GetRouteAsync<TGeometry>(
             string? baseAddress,
             HttpClient httpClient,
-            RouteRequest<TGeometry, JsonFormat> request,
-            JsonSerializerOptions? jsonSerializerOptions = null,
+            RouteRequest<TGeometry, FlatBuffersFormat> request,
             CancellationToken cancellationToken = default)
             where TGeometry : Geometry
-            => MakeRequestAsync<RouteRequest<TGeometry, JsonFormat>, RouteResponse<TGeometry>>(
+            => MakeRequestAsync(
                 baseAddress,
                 httpClient,
                 request,
-                jsonSerializerOptions,
                 cancellationToken);
 
         /// <summary>
@@ -73,21 +56,18 @@ namespace Osrm.HttpApiClient
         /// <param name="baseAddress">Base address for the OSRM backend.</param>
         /// <param name="httpClient">Http client which is responsible for sending actual request.</param>
         /// <param name="request">Table request.</param>
-        /// <param name="jsonSerializerOptions">JSON serializer options for response.</param>
         /// <param name="cancellationToken">Cancellation token.</param>
         /// <returns>Table response.</returns>
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
-        public static Task<TableResponse> GetTableAsync(
+        public static Task<FBResult> GetTableAsync(
             string? baseAddress,
             HttpClient httpClient,
-            TableRequest<JsonFormat> request,
-            JsonSerializerOptions? jsonSerializerOptions = null,
+            TableRequest<FlatBuffersFormat> request,
             CancellationToken cancellationToken = default)
-            => MakeRequestAsync<TableRequest<JsonFormat>, TableResponse>(
+            => MakeRequestAsync(
                 baseAddress,
                 httpClient,
                 request,
-                jsonSerializerOptions,
                 cancellationToken);
 
         /// <summary>
@@ -97,22 +77,19 @@ namespace Osrm.HttpApiClient
         /// <param name="baseAddress">Base address for the OSRM backend.</param>
         /// <param name="httpClient">Http client which is responsible for sending actual request.</param>
         /// <param name="request">Match request specified by Geometry.</param>
-        /// <param name="jsonSerializerOptions">JSON serializer options for response.</param>
         /// <param name="cancellationToken">Cancellation token.</param>
         /// <returns>Match response specified by Geometry.</returns>
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
-        public static Task<MatchResponse<TGeometry>> GetMatchAsync<TGeometry>(
+        public static Task<FBResult> GetMatchAsync<TGeometry>(
             string? baseAddress,
             HttpClient httpClient,
-            MatchRequest<TGeometry, JsonFormat> request,
-            JsonSerializerOptions? jsonSerializerOptions = null,
+            MatchRequest<TGeometry, FlatBuffersFormat> request,
             CancellationToken cancellationToken = default)
             where TGeometry : Geometry
-            => MakeRequestAsync<MatchRequest<TGeometry, JsonFormat>, MatchResponse<TGeometry>>(
+            => MakeRequestAsync(
                 baseAddress,
                 httpClient,
                 request,
-                jsonSerializerOptions,
                 cancellationToken);
 
         /// <summary>
@@ -122,51 +99,20 @@ namespace Osrm.HttpApiClient
         /// <param name="baseAddress">Base address for the OSRM backend.</param>
         /// <param name="httpClient">Http client which is responsible for sending actual request.</param>
         /// <param name="request">Trip request specified by Geometry.</param>
-        /// <param name="jsonSerializerOptions">JSON serializer options for response.</param>
         /// <param name="cancellationToken">Cancellation token.</param>
         /// <returns>Trip response specified by Geometry.</returns>
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
-        public static Task<TripResponse<TGeometry>> GetTripAsync<TGeometry>(
+        public static Task<FBResult> GetTripAsync<TGeometry>(
             string? baseAddress,
             HttpClient httpClient,
-            TripRequest<TGeometry, JsonFormat> request,
-            JsonSerializerOptions? jsonSerializerOptions = null,
+            TripRequest<TGeometry, FlatBuffersFormat> request,
             CancellationToken cancellationToken = default)
             where TGeometry : Geometry
-            => MakeRequestAsync<TripRequest<TGeometry, JsonFormat>, TripResponse<TGeometry>>(
+            => MakeRequestAsync(
                 baseAddress,
                 httpClient,
                 request,
-                jsonSerializerOptions,
                 cancellationToken);
-
-        /// <summary>
-        /// This service generates Mapbox Vector Tiles that can be viewed with a vector-tile capable slippy-map viewer.
-        /// </summary>
-        /// <param name="baseAddress">Base address for the OSRM backend.</param>
-        /// <param name="httpClient">Http client which is responsible for sending actual request.</param>
-        /// <param name="request">Tile request.</param>
-        /// <param name="cancellationToken">Cancellation token.</param>
-        /// <returns>Tile response.</returns>
-        public static async Task<TileResponse> GetTileAsync(
-            string? baseAddress,
-            HttpClient httpClient,
-            TileRequest request,
-            CancellationToken cancellationToken = default)
-        {
-            var requestUri = OsrmBaseStaticHttpApiClient.BuildRequestUri(baseAddress, request);
-
-            var responseMessage = await httpClient.GetAsync(requestUri, cancellationToken).ConfigureAwait(false);
-
-            var vectorTile = await responseMessage.Content.ReadAsByteArrayAsync(cancellationToken).ConfigureAwait(false);
-
-            var response = new TileResponse
-            {
-                VectorTile = vectorTile
-            };
-
-            return response;
-        }
 
         /// <summary>
         /// A general way to make requests.
@@ -176,35 +122,31 @@ namespace Osrm.HttpApiClient
         /// <param name="baseAddress">Base address for the OSRM backend.</param>
         /// <param name="httpClient">Http client which is responsible for sending actual request.</param>
         /// <param name="request">Common reqeust.</param>
-        /// <param name="jsonSerializerOptions">JSON serializer options for response.</param>
         /// <param name="cancellationToken">Cancellation token.</param>
         /// <returns>Common response.</returns>
-        public static async Task<TResponse> MakeRequestAsync<TRequest, TResponse>(
+        public static async Task<FBResult> MakeRequestAsync<TRequest>(
             string? baseAddress,
             HttpClient httpClient,
             TRequest request,
-            JsonSerializerOptions? jsonSerializerOptions = null,
             CancellationToken cancellationToken = default)
-            where TRequest : CommonRequest<JsonFormat>
-            where TResponse : CommonResponse
+            where TRequest : CommonRequest<FlatBuffersFormat>
         {
             var requestUri = OsrmBaseStaticHttpApiClient.BuildRequestUri(baseAddress, request);
 
             var responseMessage = await httpClient.GetAsync(requestUri, cancellationToken).ConfigureAwait(false);
 
-            var response = await Deserialize<TResponse>(responseMessage, jsonSerializerOptions, cancellationToken).ConfigureAwait(false);
+            var response = await Deserialize(responseMessage, cancellationToken).ConfigureAwait(false);
 
             return response!;
         }
 
-        private static async Task<T> Deserialize<T>(
+        private static async Task<FBResult> Deserialize(
             HttpResponseMessage response,
-            JsonSerializerOptions? jsonSerializerOptions = null,
             CancellationToken cancellationToken = default)
         {
-            var contentStream = await response.Content.ReadAsStreamAsync(cancellationToken).ConfigureAwait(false);
+            var responseBytes = await response.Content.ReadAsByteArrayAsync(cancellationToken).ConfigureAwait(false);
 
-            var result = await JsonSerializer.DeserializeAsync<T>(contentStream, jsonSerializerOptions ?? DefaultJsonSerializerOptions).ConfigureAwait(false);
+            var result = FlatBufferSerializer.Default.Parse<FBResult>(responseBytes);
 
             return result!;
         }

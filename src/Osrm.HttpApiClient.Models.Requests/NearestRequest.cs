@@ -5,7 +5,8 @@ namespace Osrm.HttpApiClient
     /// <summary>
     /// Snaps a coordinate to the street network and returns the nearest n matches.
     /// </summary>
-    public record NearestRequest : CommonRequest
+    public record NearestRequest<TFormat> : CommonRequest<TFormat>
+        where TFormat : struct, IFormat
     {
         private int _nearestSegments = 1;
 
