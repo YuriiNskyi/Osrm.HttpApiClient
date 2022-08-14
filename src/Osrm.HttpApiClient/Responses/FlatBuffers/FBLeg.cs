@@ -28,7 +28,7 @@ namespace Osrm.HttpApiClient
         public virtual double Weight { get; set; }
 
         /// <summary>
-        /// Summary of the route taken as string. Depends on the summary parameter:
+        /// Summary of the route taken as string. Depends on the summary parameter: true or false.
         /// </summary>
         [FlatBufferItem(3)]
         public virtual string? Summary { get; set; }

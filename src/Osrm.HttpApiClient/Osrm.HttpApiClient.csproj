@@ -17,19 +17,10 @@
     <FileVersion>1.8.0.0</FileVersion>
     <RepositoryUrl>https://github.com/YuriiNskyi/Osrm.HttpApiClient</RepositoryUrl>
     <PackageLicenseUrl>https://github.com/YuriiNskyi/Osrm.HttpApiClient/blob/main/LICENSE</PackageLicenseUrl>
-    <TargetsForTfmSpecificBuildOutput>$(TargetsForTfmSpecificBuildOutput);CopyProjectReferencesToPackage</TargetsForTfmSpecificBuildOutput>
   </PropertyGroup>
 
   <ItemGroup>
-    <ProjectReference Include="..\Osrm.HttpApiClient.Models.Common\Osrm.HttpApiClient.Models.Common.csproj" PrivateAssets="all" />
-    <ProjectReference Include="..\Osrm.HttpApiClient.Models.Requests\Osrm.HttpApiClient.Models.Requests.csproj" PrivateAssets="all" />
-    <ProjectReference Include="..\Osrm.HttpApiClient.Models.Responses\Osrm.HttpApiClient.Models.Responses.csproj" PrivateAssets="all" />
+    <PackageReference Include="FlatSharp" Version="6.3.1" />
   </ItemGroup>
-
-  <Target Name="CopyProjectReferencesToPackage" DependsOnTargets="ResolveReferences">
-    <ItemGroup>
-      <BuildOutputInPackage Include="@(ReferenceCopyLocalPaths-&gt;WithMetadataValue('ReferenceSourceTarget', 'ProjectReference'))" />
-    </ItemGroup>
-  </Target>
 
 </Project>
