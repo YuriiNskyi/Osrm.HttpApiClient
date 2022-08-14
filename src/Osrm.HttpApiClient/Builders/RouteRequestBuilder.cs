@@ -1,17 +1,21 @@
-﻿namespace Osrm.HttpApiClient
+﻿using System.Runtime.CompilerServices;
+
+namespace Osrm.HttpApiClient
 {
     /// <summary>
     /// Fluent way to build Route requests.
     /// </summary>
     /// <typeparam name="TGeometry">Geometry.</typeparam>
-    public class RouteRequestBuilder<TGeometry> : CommonRequestBuilder<RouteRequest<TGeometry>, RouteRequestBuilder<TGeometry>>
+    public class RouteRequestBuilder<TGeometry, TFormat>
+        : CommonRequestBuilder<RouteRequest<TGeometry, TFormat>, RouteRequestBuilder<TGeometry, TFormat>, TFormat>
         where TGeometry : Geometry
+        where TFormat : struct, IFormat
     {
         /// <summary>
         /// Ctor.
         /// </summary>
         /// <param name="request">Route request specified by Geometry.</param>
-        public RouteRequestBuilder(RouteRequest<TGeometry> request)
+        public RouteRequestBuilder(RouteRequest<TGeometry, TFormat> request)
             : base(request)
         {
         }
@@ -20,9 +24,10 @@
         /// Returns alternatives in response.
         /// </summary>
         /// <returns>Current builder.</returns>
-        public RouteRequestBuilder<TGeometry> ReturnAlternatives()
+        [MethodImpl(MethodImplOptions.AggressiveInlining)]
+        public RouteRequestBuilder<TGeometry, TFormat> Alternatives(Alternatives alternatives)
         {
-            Request.Alternatives = true;
+            Request.Alternatives = alternatives;
 
             return this;
         }
@@ -31,7 +36,8 @@
         /// Returns steps in response.
         /// </summary>
         /// <returns>Current builder.</returns>
-        public RouteRequestBuilder<TGeometry> ReturnSteps()
+        [MethodImpl(MethodImplOptions.AggressiveInlining)]
+        public RouteRequestBuilder<TGeometry, TFormat> ReturnSteps()
         {
             Request.Steps = true;
 
@@ -42,9 +48,10 @@
         /// Returns annotations in response.
         /// </summary>
         /// <returns>Current builder.</returns>
-        public RouteRequestBuilder<TGeometry> ReturnAnnotations()
+        [MethodImpl(MethodImplOptions.AggressiveInlining)]
+        public RouteRequestBuilder<TGeometry, TFormat> Annotations(RouteAnnotations annotations)
         {
-            Request.Annotations = true;
+            Request.Annotations = annotations;
 
             return this;
         }
@@ -54,7 +61,8 @@
         /// </summary>
         /// <param name="overview">Overview.</param>
         /// <returns>Current builder.</returns>
-        public RouteRequestBuilder<TGeometry> Overview(Overview overview)
+        [MethodImpl(MethodImplOptions.AggressiveInlining)]
+        public RouteRequestBuilder<TGeometry, TFormat> Overview(Overview overview)
         {
             Request.Overview = overview;
 
@@ -66,7 +74,8 @@
         /// </summary>
         /// <param name="continueStraight">Continue straight parameter.</param>
         /// <returns>Current builder.</returns>
-        public RouteRequestBuilder<TGeometry> ContinueStraight(ContinueStraight continueStraight)
+        [MethodImpl(MethodImplOptions.AggressiveInlining)]
+        public RouteRequestBuilder<TGeometry, TFormat> ContinueStraight(ContinueStraight continueStraight)
         {
             Request.ContinueStraight = continueStraight;
 
@@ -78,7 +87,8 @@
         /// </summary>
         /// <param name="waypoints">Waypoints.</param>
         /// <returns>Current builder.</returns>
-        public RouteRequestBuilder<TGeometry> Waypoints(params int[] waypoints)
+        [MethodImpl(MethodImplOptions.AggressiveInlining)]
+        public RouteRequestBuilder<TGeometry, TFormat> Waypoints(params int[] waypoints)
         {
             Request.Waypoints = waypoints;
 

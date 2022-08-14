@@ -1,0 +1,103 @@
+﻿{
+    "durations": [
+        [
+            0,
+            251.5,
+            384.4
+        ],
+        [
+            258.1,
+            0,
+            363.5
+        ],
+        [
+            354.7,
+            301.1,
+            0
+        ]
+    ],
+    "distances": [
+        [
+            0,
+            1887.3,
+            3802.8
+        ],
+        [
+            1903.1,
+            0,
+            2845.8
+        ],
+        [
+            3280.4,
+            2292.8,
+            0
+        ]
+    ],
+    "sources": [
+        {
+            "nodes": [],
+            "name": "Friedrichstra\u00DFe",
+            "location": [
+                13.388798,
+                52.517033
+            ],
+            "distance": 4.231666,
+            "hint": "J4zFiJuMxYgYAAAABQAAAAAAAAAgAAAASjFaQdLNK0AAAAAAsPePQQwAAAADAAAAAAAAABAAAAAe5QAA_kvMAKlYIQM8TMwArVghAwAA7wquu9rw"
+        },
+        {
+            "nodes": [],
+            "name": "Torstra\u00DFe",
+            "location": [
+                13.397631,
+                52.529432
+            ],
+            "distance": 2.789393,
+            "hint": "98EhgFMIt4gGAAAACgAAAAAAAAB2AAAAW7-PQOKcyEAAAAAApq6DQgYAAAAKAAAAAAAAAHYAAAAe5QAAf27MABiJIQOCbswA_4ghAwAAXwWuu9rw"
+        },
+        {
+            "nodes": [],
+            "name": "Platz der Vereinten Nationen",
+            "location": [
+                13.428554,
+                52.523239
+            ],
+            "distance": 2.226595,
+            "hint": "McAhgP___38fAAAAUQAAACYAAAAeAAAAsowKQkpQX0Lx6yZCvsQGQh8AAABRAAAAJgAAAB4AAAAe5QAASufMAOdwIQNL58wA03AhAwMAvxCuu9rw"
+        }
+    ],
+    "destinations": [
+        {
+            "nodes": [],
+            "name": "Friedrichstra\u00DFe",
+            "location": [
+                13.388798,
+                52.517033
+            ],
+            "distance": 4.231666,
+            "hint": "J4zFiJuMxYgYAAAABQAAAAAAAAAgAAAASjFaQdLNK0AAAAAAsPePQQwAAAADAAAAAAAAABAAAAAe5QAA_kvMAKlYIQM8TMwArVghAwAA7wquu9rw"
+        },
+        {
+            "nodes": [],
+            "name": "Torstra\u00DFe",
+            "location": [
+                13.397631,
+                52.529432
+            ],
+            "distance": 2.789393,
+            "hint": "98EhgFMIt4gGAAAACgAAAAAAAAB2AAAAW7-PQOKcyEAAAAAApq6DQgYAAAAKAAAAAAAAAHYAAAAe5QAAf27MABiJIQOCbswA_4ghAwAAXwWuu9rw"
+        },
+        {
+            "nodes": [],
+            "name": "Platz der Vereinten Nationen",
+            "location": [
+                13.428554,
+                52.523239
+            ],
+            "distance": 2.226595,
+            "hint": "McAhgP___38fAAAAUQAAACYAAAAeAAAAsowKQkpQX0Lx6yZCvsQGQh8AAABRAAAAJgAAAB4AAAAe5QAASufMAOdwIQNL58wA03AhAwMAvxCuu9rw"
+        }
+    ],
+    "fallback_speed_cells": [],
+    "code": "Ok",
+    "message": null
+}

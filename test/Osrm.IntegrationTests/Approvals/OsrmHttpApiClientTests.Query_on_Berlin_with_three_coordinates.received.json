@@ -1,0 +1,63 @@
+﻿{
+    "waypoints": [
+        {
+            "nodes": [],
+            "name": "Friedrichstra\u00DFe",
+            "location": [
+                13.388798,
+                52.517033
+            ],
+            "distance": 4.231666,
+            "hint": "J4zFiJuMxYgYAAAABQAAAAAAAAAgAAAASjFaQdLNK0AAAAAAsPePQQwAAAADAAAAAAAAABAAAAAe5QAA_kvMAKlYIQM8TMwArVghAwAA7wquu9rw"
+        },
+        {
+            "nodes": [],
+            "name": "Torstra\u00DFe",
+            "location": [
+                13.397631,
+                52.529432
+            ],
+            "distance": 2.789393,
+            "hint": "98EhgFMIt4gGAAAACgAAAAAAAAB2AAAAW7-PQOKcyEAAAAAApq6DQgYAAAAKAAAAAAAAAHYAAAAe5QAAf27MABiJIQOCbswA_4ghAwAAXwWuu9rw"
+        },
+        {
+            "nodes": [],
+            "name": "Platz der Vereinten Nationen",
+            "location": [
+                13.428554,
+                52.523239
+            ],
+            "distance": 2.226595,
+            "hint": "McAhgP___38fAAAAUQAAACYAAAAeAAAAsowKQkpQX0Lx6yZCvsQGQh8AAABRAAAAJgAAAB4AAAAe5QAASufMAOdwIQNL58wA03AhAwMAvxCuu9rw"
+        }
+    ],
+    "routes": [
+        {
+            "distance": 4723.8,
+            "duration": 615,
+            "geometry": null,
+            "weight": 616.2,
+            "weight_name": "routability",
+            "legs": [
+                {
+                    "distance": 1884.7,
+                    "duration": 251.5,
+                    "weight": 252.7,
+                    "summary": "",
+                    "steps": [],
+                    "annotations": null
+                },
+                {
+                    "distance": 2839.1,
+                    "duration": 363.5,
+                    "weight": 363.5,
+                    "summary": "",
+                    "steps": [],
+                    "annotations": null
+                }
+            ]
+        }
+    ],
+    "code": "Ok",
+    "message": null
+}

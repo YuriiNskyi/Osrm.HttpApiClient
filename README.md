@@ -1,5 +1,5 @@
 # Osrm.HttpApiClient
-Http API Client for OSRM library.
+Http API Client for OSRM library. Supports FlatBuffers format as well.
 
 [![NuGet](https://img.shields.io/nuget/v/Osrm.HttpApiClient.svg?style=flat)](https://www.nuget.org/packages/Osrm.HttpApiClient/)
 
@@ -172,6 +172,8 @@ services.AddHttpClient<OsrmHttpApiClient>(httpClient =>
 
 Check `OsrmHttpApiClient.DefaultJsonSerializerOptions` field for used options.
 
+[FlatSharp](https://github.com/jamescourtney/FlatSharp) is used to parse`.fbs` response. This is the only one external dependency.
+
 ### Can I modify something in this library?
 
 Sure! 
@@ -186,6 +188,10 @@ You can find useful information here: [Slippy map tilenames](https://wiki.openst
 
 `SlippyMapTiles` methods are also provided, to help with conversion between `lon/lat` and `X/Y`.
 
+### How can I use FlatBuffers format?
+
+You should pass `FlatBuffersFormat` to your builder. Furthermore, special `OsrmFlatBuffersHttpApiClient` and `OsrmFlatBuffersStaticHttpApiClient` are used to process `flatbuffers` format.
+
 ## Planned
 
 - ~~Add `Tile` service.~~
@@ -194,6 +200,8 @@ You can find useful information here: [Slippy map tilenames](https://wiki.openst
 - Create separate, zero-alloc version of this library.
 
 ## Benchmark results
+
+Creation of the specified query objects is measured.
 
 ``` ini
 BenchmarkDotNet=v0.12.1, OS=Windows 10.0.19042

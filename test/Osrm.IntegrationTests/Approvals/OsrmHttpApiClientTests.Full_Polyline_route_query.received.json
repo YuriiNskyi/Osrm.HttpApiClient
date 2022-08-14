@@ -1,0 +1,1373 @@
+﻿{
+    "waypoints": [
+        {
+            "nodes": [],
+            "name": "Friedrichstra\u00DFe",
+            "location": [
+                13.388798,
+                52.517033
+            ],
+            "distance": 4.231666,
+            "hint": "J4zFiJuMxYgYAAAABQAAAAAAAAAgAAAASjFaQdLNK0AAAAAAsPePQQwAAAADAAAAAAAAABAAAAAe5QAA_kvMAKlYIQM8TMwArVghAwAA7wquu9rw"
+        },
+        {
+            "nodes": [],
+            "name": "Torstra\u00DFe",
+            "location": [
+                13.397631,
+                52.529432
+            ],
+            "distance": 2.789393,
+            "hint": "98EhgFMIt4gGAAAACgAAAAAAAAB2AAAAW7-PQOKcyEAAAAAApq6DQgYAAAAKAAAAAAAAAHYAAAAe5QAAf27MABiJIQOCbswA_4ghAwAAXwWuu9rw"
+        },
+        {
+            "nodes": [],
+            "name": "Platz der Vereinten Nationen",
+            "location": [
+                13.428554,
+                52.523239
+            ],
+            "distance": 2.226595,
+            "hint": "McAhgP___38fAAAAUQAAACYAAAAeAAAAsowKQkpQX0Lx6yZCvsQGQh8AAABRAAAAJgAAAB4AAAAe5QAASufMAOdwIQNL58wA03AhAwMAvxCuu9rw"
+        }
+    ],
+    "routes": [
+        {
+            "distance": 4723.8,
+            "duration": 615,
+            "geometry": "mfp_I__vpAYBO@K@[BuBRgBLK@UBMMC?AAKAe@FyBTC@E?IDKDA@K@]BUBSBA?E@E@A@KFUBK@mAL{CZQ@qBRUBmAFc@@}@Fu@DG?a@B[@qAF_AJ[D_E\u0060@SBO@ODA@UDA?]JC?uBNE?OAKACa@AI]mCCUE[AK[iCWqB[{Bk@sE_@_DAICSAOIm@AIQuACOQyAG[Gc@]wBw@aFKu@y@oFCMAOIm@?KAQ?KIuDQmHE}BBQ?Q?OCq@?I?IASAg@OuF?OAi@?c@@c@Du@r@cH@U@I@G@K?E~@kJRyBf@uE@KFi@RaBBMFc@Da@@ETaC@QJ{@Ny@Ha@RiAfBuJF]DOh@yAHSf@aADIR_@\\q@w@y@e@a@CCUQaCkB{@y@GESO?_@?C?[IoCIgDMsEAYOkEAQ@Yj@kENg@ZyBBIHm@FY@GBUJk@JmA?c@?QAQG]LKDEDCHOL]FO^uA@GTu@La@\u0060A_DJ[pAgCJSlAwBJSf@{@b@w@dAqBHQZq@LMLKRIFAL?J@HBFBp@XPHh@TTJNFTRNFd@N\\HF@J@J@@V?N@rA@dB",
+            "weight": 616.2,
+            "weight_name": "routability",
+            "legs": [
+                {
+                    "distance": 1884.7,
+                    "duration": 251.5,
+                    "weight": 252.7,
+                    "summary": "Friedrichstra\u00DFe, Torstra\u00DFe",
+                    "steps": [
+                        {
+                            "distance": 1135.7,
+                            "duration": 129.2,
+                            "geometry": "mfp_I__vpAYBO@K@[BuBRgBLK@UBMMC?AAKAe@FyBTC@E?IDKDA@K@]BUBSBA?E@E@A@KFUBK@mAL{CZQ@qBRUBmAFc@@}@Fu@DG?a@B[@qAF_AJ[D_E\u0060@SBO@ODA@UDA?]JC?uBNE?OAKA",
+                            "weight": 130.4,
+                            "name": "Friedrichstra\u00DFe",
+                            "ref": null,
+                            "pronunciation": null,
+                            "mode": "driving",
+                            "maneuver": {
+                                "location": [
+                                    13.388798,
+                                    52.517033
+                                ],
+                                "bearing_before": 0,
+                                "bearing_after": 355,
+                                "type": "depart",
+                                "modifier": null,
+                                "exit": 0
+                            },
+                            "intersections": [
+                                {
+                                    "location": [
+                                        13.388798,
+                                        52.517033
+                                    ],
+                                    "bearings": [
+                                        355
+                                    ],
+                                    "classes": [],
+                                    "entry": [
+                                        true
+                                    ],
+                                    "in": 0,
+                                    "out": 0,
+                                    "lanes": []
+                                },
+                                {
+                                    "location": [
+                                        13.388779,
+                                        52.517155
+                                    ],
+                                    "bearings": [
+                                        0,
+                                        90,
+                                        180,
+                                        270
+                                    ],
+                                    "classes": [],
+                                    "entry": [
+                                        true,
+                                        false,
+                                        false,
+                                        true
+                                    ],
+                                    "in": 2,
+                                    "out": 0,
+                                    "lanes": []
+                                },
+                                {
+                                    "location": [
+                                        13.388643,
+                                        52.51803
+                                    ],
+                                    "bearings": [
+                                        0,
+                                        90,
+                                        180,
+                                        270
+                                    ],
+                                    "classes": [],
+                                    "entry": [
+                                        true,
+                                        true,
+                                        false,
+                                        true
+                                    ],
+                                    "in": 2,
+                                    "out": 0,
+                                    "lanes": []
+                                },
+                                {
+                                    "location": [
+                                        13.388544,
+                                        52.518715
+                                    ],
+                                    "bearings": [
+                                        30,
+                                        90,
+                                        180,
+                                        270,
+                                        315
+                                    ],
+                                    "classes": [],
+                                    "entry": [
+                                        true,
+                                        true,
+                                        false,
+                                        true,
+                                        false
+                                    ],
+                                    "in": 2,
+                                    "out": 0,
+                                    "lanes": []
+                                },
+                                {
+                                    "location": [
+                                        13.388308,
+                                        52.520336
+                                    ],
+                                    "bearings": [
+                                        0,
+                                        180,
+                                        270
+                                    ],
+                                    "classes": [],
+                                    "entry": [
+                                        true,
+                                        false,
+                                        true
+                                    ],
+                                    "in": 1,
+                                    "out": 0,
+                                    "lanes": []
+                                },
+                                {
+                                    "location": [
+                                        13.388024,
+                                        52.52175
+                                    ],
+                                    "bearings": [
+                                        0,
+                                        60,
+                                        180,
+                                        225
+                                    ],
+                                    "classes": [],
+                                    "entry": [
+                                        true,
+                                        true,
+                                        false,
+                                        true
+                                    ],
+                                    "in": 2,
+                                    "out": 0,
+                                    "lanes": []
+                                },
+                                {
+                                    "location": [
+                                        13.387885,
+                                        52.522526
+                                    ],
+                                    "bearings": [
+                                        0,
+                                        180,
+                                        225
+                                    ],
+                                    "classes": [],
+                                    "entry": [
+                                        true,
+                                        false,
+                                        true
+                                    ],
+                                    "in": 1,
+                                    "out": 0,
+                                    "lanes": []
+                                },
+                                {
+                                    "location": [
+                                        13.387799,
+                                        52.5234
+                                    ],
+                                    "bearings": [
+                                        0,
+                                        90,
+                                        180
+                                    ],
+                                    "classes": [],
+                                    "entry": [
+                                        true,
+                                        true,
+                                        false
+                                    ],
+                                    "in": 2,
+                                    "out": 0,
+                                    "lanes": []
+                                },
+                                {
+                                    "location": [
+                                        13.387748,
+                                        52.523876
+                                    ],
+                                    "bearings": [
+                                        0,
+                                        180,
+                                        270
+                                    ],
+                                    "classes": [],
+                                    "entry": [
+                                        true,
+                                        false,
+                                        true
+                                    ],
+                                    "in": 1,
+                                    "out": 0,
+                                    "lanes": [
+                                        {
+                                            "indications": [
+                                                "none"
+                                            ],
+                                            "valid": false
+                                        },
+                                        {
+                                            "indications": [
+                                                "left"
+                                            ],
+                                            "valid": false
+                                        },
+                                        {
+                                            "indications": [
+                                                "straight"
+                                            ],
+                                            "valid": true
+                                        }
+                                    ]
+                                },
+                                {
+                                    "location": [
+                                        13.3877,
+                                        52.524433
+                                    ],
+                                    "bearings": [
+                                        0,
+                                        90,
+                                        180
+                                    ],
+                                    "classes": [],
+                                    "entry": [
+                                        true,
+                                        true,
+                                        false
+                                    ],
+                                    "in": 2,
+                                    "out": 0,
+                                    "lanes": []
+                                },
+                                {
+                                    "location": [
+                                        13.387337,
+                                        52.526237
+                                    ],
+                                    "bearings": [
+                                        105,
+                                        165,
+                                        300,
+                                        345
+                                    ],
+                                    "classes": [],
+                                    "entry": [
+                                        true,
+                                        false,
+                                        false,
+                                        true
+                                    ],
+                                    "in": 1,
+                                    "out": 3,
+                                    "lanes": []
+                                },
+                                {
+                                    "location": [
+                                        13.387283,
+                                        52.526386
+                                    ],
+                                    "bearings": [
+                                        0,
+                                        105,
+                                        165,
+                                        255
+                                    ],
+                                    "classes": [],
+                                    "entry": [
+                                        true,
+                                        false,
+                                        false,
+                                        false
+                                    ],
+                                    "in": 2,
+                                    "out": 0,
+                                    "lanes": []
+                                }
+                            ],
+                            "rotary_name": null,
+                            "rotary_pronunciation": null,
+                            "driving_side": "right"
+                        },
+                        {
+                            "distance": 749,
+                            "duration": 122.3,
+                            "geometry": "yer_IcuupACa@AI]mCCUE[AK[iCWqB[{Bk@sE_@_DAICSAOIm@AIQuACOQyAG[Gc@]wBw@aFKu@y@oFCMAOIm@?K",
+                            "weight": 122.3,
+                            "name": "Torstra\u00DFe",
+                            "ref": null,
+                            "pronunciation": null,
+                            "mode": "driving",
+                            "maneuver": {
+                                "location": [
+                                    13.387215,
+                                    52.527166
+                                ],
+                                "bearing_before": 4,
+                                "bearing_after": 71,
+                                "type": "turn",
+                                "modifier": "right",
+                                "exit": 0
+                            },
+                            "intersections": [
+                                {
+                                    "location": [
+                                        13.387215,
+                                        52.527164
+                                    ],
+                                    "bearings": [
+                                        75,
+                                        180,
+                                        255,
+                                        330
+                                    ],
+                                    "classes": [],
+                                    "entry": [
+                                        true,
+                                        false,
+                                        true,
+                                        true
+                                    ],
+                                    "in": 1,
+                                    "out": 0,
+                                    "lanes": []
+                                },
+                                {
+                                    "location": [
+                                        13.389147,
+                                        52.52755
+                                    ],
+                                    "bearings": [
+                                        75,
+                                        255,
+                                        345
+                                    ],
+                                    "classes": [],
+                                    "entry": [
+                                        true,
+                                        false,
+                                        true
+                                    ],
+                                    "in": 1,
+                                    "out": 0,
+                                    "lanes": []
+                                },
+                                {
+                                    "location": [
+                                        13.391396,
+                                        52.52803
+                                    ],
+                                    "bearings": [
+                                        75,
+                                        255,
+                                        330
+                                    ],
+                                    "classes": [],
+                                    "entry": [
+                                        true,
+                                        false,
+                                        true
+                                    ],
+                                    "in": 1,
+                                    "out": 0,
+                                    "lanes": []
+                                },
+                                {
+                                    "location": [
+                                        13.392425,
+                                        52.528233
+                                    ],
+                                    "bearings": [
+                                        75,
+                                        165,
+                                        255
+                                    ],
+                                    "classes": [],
+                                    "entry": [
+                                        true,
+                                        true,
+                                        false
+                                    ],
+                                    "in": 2,
+                                    "out": 0,
+                                    "lanes": []
+                                },
+                                {
+                                    "location": [
+                                        13.393814,
+                                        52.528526
+                                    ],
+                                    "bearings": [
+                                        75,
+                                        135,
+                                        255,
+                                        315
+                                    ],
+                                    "classes": [],
+                                    "entry": [
+                                        true,
+                                        true,
+                                        false,
+                                        true
+                                    ],
+                                    "in": 2,
+                                    "out": 0,
+                                    "lanes": []
+                                },
+                                {
+                                    "location": [
+                                        13.395724,
+                                        52.528996
+                                    ],
+                                    "bearings": [
+                                        75,
+                                        255,
+                                        345
+                                    ],
+                                    "classes": [],
+                                    "entry": [
+                                        true,
+                                        false,
+                                        true
+                                    ],
+                                    "in": 1,
+                                    "out": 0,
+                                    "lanes": []
+                                },
+                                {
+                                    "location": [
+                                        13.397565,
+                                        52.52943
+                                    ],
+                                    "bearings": [
+                                        90,
+                                        180,
+                                        255,
+                                        345
+                                    ],
+                                    "classes": [],
+                                    "entry": [
+                                        true,
+                                        true,
+                                        false,
+                                        true
+                                    ],
+                                    "in": 2,
+                                    "out": 0,
+                                    "lanes": []
+                                }
+                            ],
+                            "rotary_name": null,
+                            "rotary_pronunciation": null,
+                            "driving_side": "right"
+                        },
+                        {
+                            "distance": 0,
+                            "duration": 0,
+                            "geometry": "}sr_IevwpA",
+                            "weight": 0,
+                            "name": "Torstra\u00DFe",
+                            "ref": null,
+                            "pronunciation": null,
+                            "mode": "driving",
+                            "maneuver": {
+                                "location": [
+                                    13.397631,
+                                    52.529432
+                                ],
+                                "bearing_before": 86,
+                                "bearing_after": 0,
+                                "type": "arrive",
+                                "modifier": null,
+                                "exit": 0
+                            },
+                            "intersections": [
+                                {
+                                    "location": [
+                                        13.397631,
+                                        52.52943
+                                    ],
+                                    "bearings": [
+                                        266
+                                    ],
+                                    "classes": [],
+                                    "entry": [
+                                        true
+                                    ],
+                                    "in": 0,
+                                    "out": 0,
+                                    "lanes": []
+                                }
+                            ],
+                            "rotary_name": null,
+                            "rotary_pronunciation": null,
+                            "driving_side": "right"
+                        }
+                    ],
+                    "annotations": null
+                },
+                {
+                    "distance": 2839.1,
+                    "duration": 363.5,
+                    "weight": 363.5,
+                    "summary": "Torstra\u00DFe, Friedenstra\u00DFe",
+                    "steps": [
+                        {
+                            "distance": 1272.3,
+                            "duration": 202.6,
+                            "geometry": "}sr_IevwpAAQ?KIuDQmHE}BBQ?Q?OCq@?I?IASAg@OuF?OAi@?c@@c@Du@r@cH@U@I@G@K?E~@kJRyBf@uE@KFi@RaBBMFc@Da@@ETaC@QJ{@Ny@Ha@RiAfBuJF]DOh@yAHSf@aADIR_@",
+                            "weight": 202.6,
+                            "name": "Torstra\u00DFe",
+                            "ref": null,
+                            "pronunciation": null,
+                            "mode": "driving",
+                            "maneuver": {
+                                "location": [
+                                    13.397631,
+                                    52.529432
+                                ],
+                                "bearing_before": 0,
+                                "bearing_after": 85,
+                                "type": "depart",
+                                "modifier": null,
+                                "exit": 0
+                            },
+                            "intersections": [
+                                {
+                                    "location": [
+                                        13.397631,
+                                        52.52943
+                                    ],
+                                    "bearings": [
+                                        85
+                                    ],
+                                    "classes": [],
+                                    "entry": [
+                                        true
+                                    ],
+                                    "in": 0,
+                                    "out": 0,
+                                    "lanes": []
+                                },
+                                {
+                                    "location": [
+                                        13.401337,
+                                        52.529606
+                                    ],
+                                    "bearings": [
+                                        90,
+                                        165,
+                                        270,
+                                        345
+                                    ],
+                                    "classes": [],
+                                    "entry": [
+                                        true,
+                                        true,
+                                        false,
+                                        false
+                                    ],
+                                    "in": 2,
+                                    "out": 0,
+                                    "lanes": [
+                                        {
+                                            "indications": [
+                                                "left"
+                                            ],
+                                            "valid": true
+                                        },
+                                        {
+                                            "indications": [
+                                                "straight"
+                                            ],
+                                            "valid": true
+                                        },
+                                        {
+                                            "indications": [
+                                                "straight",
+                                                "right"
+                                            ],
+                                            "valid": true
+                                        }
+                                    ]
+                                },
+                                {
+                                    "location": [
+                                        13.401541,
+                                        52.529617
+                                    ],
+                                    "bearings": [
+                                        90,
+                                        165,
+                                        285
+                                    ],
+                                    "classes": [],
+                                    "entry": [
+                                        true,
+                                        false,
+                                        true
+                                    ],
+                                    "in": 2,
+                                    "out": 0,
+                                    "lanes": []
+                                },
+                                {
+                                    "location": [
+                                        13.409405,
+                                        52.52871
+                                    ],
+                                    "bearings": [
+                                        30,
+                                        105,
+                                        210,
+                                        285
+                                    ],
+                                    "classes": [],
+                                    "entry": [
+                                        true,
+                                        true,
+                                        true,
+                                        false
+                                    ],
+                                    "in": 3,
+                                    "out": 1,
+                                    "lanes": [
+                                        {
+                                            "indications": [
+                                                "left"
+                                            ],
+                                            "valid": false
+                                        },
+                                        {
+                                            "indications": [
+                                                "straight"
+                                            ],
+                                            "valid": true
+                                        },
+                                        {
+                                            "indications": [
+                                                "straight",
+                                                "right"
+                                            ],
+                                            "valid": true
+                                        }
+                                    ]
+                                },
+                                {
+                                    "location": [
+                                        13.409967,
+                                        52.52859
+                                    ],
+                                    "bearings": [
+                                        105,
+                                        165,
+                                        285
+                                    ],
+                                    "classes": [],
+                                    "entry": [
+                                        true,
+                                        true,
+                                        false
+                                    ],
+                                    "in": 2,
+                                    "out": 0,
+                                    "lanes": [
+                                        {
+                                            "indications": [
+                                                "straight"
+                                            ],
+                                            "valid": true
+                                        },
+                                        {
+                                            "indications": [
+                                                "straight",
+                                                "right"
+                                            ],
+                                            "valid": true
+                                        }
+                                    ]
+                                },
+                                {
+                                    "location": [
+                                        13.410145,
+                                        52.528553
+                                    ],
+                                    "bearings": [
+                                        105,
+                                        150,
+                                        285,
+                                        330
+                                    ],
+                                    "classes": [],
+                                    "entry": [
+                                        true,
+                                        false,
+                                        false,
+                                        false
+                                    ],
+                                    "in": 2,
+                                    "out": 0,
+                                    "lanes": [
+                                        {
+                                            "indications": [
+                                                "straight"
+                                            ],
+                                            "valid": true
+                                        },
+                                        {
+                                            "indications": [
+                                                "straight",
+                                                "right"
+                                            ],
+                                            "valid": true
+                                        }
+                                    ]
+                                },
+                                {
+                                    "location": [
+                                        13.411852,
+                                        52.528202
+                                    ],
+                                    "bearings": [
+                                        120,
+                                        210,
+                                        285
+                                    ],
+                                    "classes": [],
+                                    "entry": [
+                                        true,
+                                        true,
+                                        false
+                                    ],
+                                    "in": 2,
+                                    "out": 0,
+                                    "lanes": []
+                                }
+                            ],
+                            "rotary_name": null,
+                            "rotary_pronunciation": null,
+                            "driving_side": "right"
+                        },
+                        {
+                            "distance": 60.5,
+                            "duration": 12,
+                            "geometry": "gdr_Iie{pA\\q@w@y@",
+                            "weight": 12,
+                            "name": "",
+                            "ref": null,
+                            "pronunciation": null,
+                            "mode": "driving",
+                            "maneuver": {
+                                "location": [
+                                    13.415405,
+                                    52.526922
+                                ],
+                                "bearing_before": 133,
+                                "bearing_after": 133,
+                                "type": "turn",
+                                "modifier": "left",
+                                "exit": 0
+                            },
+                            "intersections": [
+                                {
+                                    "location": [
+                                        13.415405,
+                                        52.52692
+                                    ],
+                                    "bearings": [
+                                        30,
+                                        135,
+                                        210,
+                                        315
+                                    ],
+                                    "classes": [],
+                                    "entry": [
+                                        false,
+                                        true,
+                                        true,
+                                        false
+                                    ],
+                                    "in": 3,
+                                    "out": 1,
+                                    "lanes": [
+                                        {
+                                            "indications": [
+                                                "left"
+                                            ],
+                                            "valid": false
+                                        },
+                                        {
+                                            "indications": [
+                                                "left"
+                                            ],
+                                            "valid": false
+                                        },
+                                        {
+                                            "indications": [
+                                                "straight"
+                                            ],
+                                            "valid": false
+                                        },
+                                        {
+                                            "indications": [
+                                                "straight"
+                                            ],
+                                            "valid": true
+                                        },
+                                        {
+                                            "indications": [
+                                                "straight",
+                                                "right"
+                                            ],
+                                            "valid": true
+                                        }
+                                    ]
+                                },
+                                {
+                                    "location": [
+                                        13.415657,
+                                        52.52677
+                                    ],
+                                    "bearings": [
+                                        30,
+                                        135,
+                                        210,
+                                        315
+                                    ],
+                                    "classes": [],
+                                    "entry": [
+                                        true,
+                                        true,
+                                        false,
+                                        false
+                                    ],
+                                    "in": 3,
+                                    "out": 0,
+                                    "lanes": [
+                                        {
+                                            "indications": [
+                                                "left"
+                                            ],
+                                            "valid": true
+                                        },
+                                        {
+                                            "indications": [
+                                                "left"
+                                            ],
+                                            "valid": true
+                                        },
+                                        {
+                                            "indications": [
+                                                "straight"
+                                            ],
+                                            "valid": false
+                                        },
+                                        {
+                                            "indications": [
+                                                "straight"
+                                            ],
+                                            "valid": false
+                                        },
+                                        {
+                                            "indications": [
+                                                "straight"
+                                            ],
+                                            "valid": false
+                                        }
+                                    ]
+                                }
+                            ],
+                            "rotary_name": null,
+                            "rotary_pronunciation": null,
+                            "driving_side": "right"
+                        },
+                        {
+                            "distance": 177.4,
+                            "duration": 18.2,
+                            "geometry": "aer_Iuh{pAe@a@CCUQaCkB{@y@GESO",
+                            "weight": 18.2,
+                            "name": "Prenzlauer Allee",
+                            "ref": null,
+                            "pronunciation": null,
+                            "mode": "driving",
+                            "maneuver": {
+                                "location": [
+                                    13.415945,
+                                    52.527047
+                                ],
+                                "bearing_before": 30,
+                                "bearing_after": 26,
+                                "type": "new name",
+                                "modifier": "straight",
+                                "exit": 0
+                            },
+                            "intersections": [
+                                {
+                                    "location": [
+                                        13.415945,
+                                        52.527046
+                                    ],
+                                    "bearings": [
+                                        30,
+                                        120,
+                                        210,
+                                        315
+                                    ],
+                                    "classes": [],
+                                    "entry": [
+                                        true,
+                                        false,
+                                        false,
+                                        true
+                                    ],
+                                    "in": 2,
+                                    "out": 0,
+                                    "lanes": [
+                                        {
+                                            "indications": [
+                                                "left"
+                                            ],
+                                            "valid": false
+                                        },
+                                        {
+                                            "indications": [
+                                                "straight"
+                                            ],
+                                            "valid": true
+                                        },
+                                        {
+                                            "indications": [
+                                                "straight"
+                                            ],
+                                            "valid": true
+                                        }
+                                    ]
+                                }
+                            ],
+                            "rotary_name": null,
+                            "rotary_pronunciation": null,
+                            "driving_side": "right"
+                        },
+                        {
+                            "distance": 547.1,
+                            "duration": 55,
+                            "geometry": "{mr_Iip{pA?_@?C?[IoCIgDMsEAYOkEAQ@Yj@kENg@ZyBBIHm@FY@GBUJk@JmA?c@?QAQG]",
+                            "weight": 55,
+                            "name": "Prenzlauer Berg",
+                            "ref": null,
+                            "pronunciation": null,
+                            "mode": "driving",
+                            "maneuver": {
+                                "location": [
+                                    13.417166,
+                                    52.528458
+                                ],
+                                "bearing_before": 28,
+                                "bearing_after": 85,
+                                "type": "turn",
+                                "modifier": "right",
+                                "exit": 0
+                            },
+                            "intersections": [
+                                {
+                                    "location": [
+                                        13.417166,
+                                        52.528458
+                                    ],
+                                    "bearings": [
+                                        30,
+                                        90,
+                                        210,
+                                        315
+                                    ],
+                                    "classes": [],
+                                    "entry": [
+                                        true,
+                                        true,
+                                        false,
+                                        false
+                                    ],
+                                    "in": 2,
+                                    "out": 1,
+                                    "lanes": []
+                                },
+                                {
+                                    "location": [
+                                        13.423592,
+                                        52.528206
+                                    ],
+                                    "bearings": [
+                                        45,
+                                        120,
+                                        225,
+                                        285
+                                    ],
+                                    "classes": [],
+                                    "entry": [
+                                        false,
+                                        true,
+                                        true,
+                                        false
+                                    ],
+                                    "in": 3,
+                                    "out": 1,
+                                    "lanes": []
+                                },
+                                {
+                                    "location": [
+                                        13.423868,
+                                        52.528137
+                                    ],
+                                    "bearings": [
+                                        45,
+                                        120,
+                                        210,
+                                        300
+                                    ],
+                                    "classes": [],
+                                    "entry": [
+                                        true,
+                                        true,
+                                        false,
+                                        false
+                                    ],
+                                    "in": 3,
+                                    "out": 1,
+                                    "lanes": []
+                                }
+                            ],
+                            "rotary_name": null,
+                            "rotary_pronunciation": null,
+                            "driving_side": "right"
+                        },
+                        {
+                            "distance": 509.2,
+                            "duration": 47.9,
+                            "geometry": "mkr_Iea}pALKDEDCHOL]FO^uA@GTu@La@\u0060A_DJ[pAgCJSlAwBJSf@{@b@w@dAqBHQZq@LMLKRI",
+                            "weight": 47.9,
+                            "name": "Friedenstra\u00DFe",
+                            "ref": null,
+                            "pronunciation": null,
+                            "mode": "driving",
+                            "maneuver": {
+                                "location": [
+                                    13.424993,
+                                    52.528068
+                                ],
+                                "bearing_before": 67,
+                                "bearing_after": 153,
+                                "type": "turn",
+                                "modifier": "right",
+                                "exit": 0
+                            },
+                            "intersections": [
+                                {
+                                    "location": [
+                                        13.424993,
+                                        52.52807
+                                    ],
+                                    "bearings": [
+                                        60,
+                                        150,
+                                        255,
+                                        345
+                                    ],
+                                    "classes": [],
+                                    "entry": [
+                                        true,
+                                        true,
+                                        false,
+                                        true
+                                    ],
+                                    "in": 2,
+                                    "out": 1,
+                                    "lanes": []
+                                },
+                                {
+                                    "location": [
+                                        13.425842,
+                                        52.527622
+                                    ],
+                                    "bearings": [
+                                        120,
+                                        225,
+                                        300
+                                    ],
+                                    "classes": [],
+                                    "entry": [
+                                        true,
+                                        true,
+                                        false
+                                    ],
+                                    "in": 2,
+                                    "out": 0,
+                                    "lanes": []
+                                },
+                                {
+                                    "location": [
+                                        13.428041,
+                                        52.526566
+                                    ],
+                                    "bearings": [
+                                        135,
+                                        225,
+                                        315
+                                    ],
+                                    "classes": [],
+                                    "entry": [
+                                        true,
+                                        true,
+                                        false
+                                    ],
+                                    "in": 2,
+                                    "out": 0,
+                                    "lanes": []
+                                },
+                                {
+                                    "location": [
+                                        13.429315,
+                                        52.525738
+                                    ],
+                                    "bearings": [
+                                        135,
+                                        225,
+                                        315
+                                    ],
+                                    "classes": [],
+                                    "entry": [
+                                        true,
+                                        true,
+                                        false
+                                    ],
+                                    "in": 2,
+                                    "out": 0,
+                                    "lanes": []
+                                }
+                            ],
+                            "rotary_name": null,
+                            "rotary_pronunciation": null,
+                            "driving_side": "right"
+                        },
+                        {
+                            "distance": 196.4,
+                            "duration": 20.9,
+                            "geometry": "_xq_Iac~pAFAL?J@HBFBp@XPHh@TTJNFTRNFd@N\\HF@J@J@",
+                            "weight": 20.9,
+                            "name": "Platz der Vereinten Nationen",
+                            "ref": null,
+                            "pronunciation": null,
+                            "mode": "driving",
+                            "maneuver": {
+                                "location": [
+                                    13.430405,
+                                    52.524964
+                                ],
+                                "bearing_before": 163,
+                                "bearing_after": 174,
+                                "type": "new name",
+                                "modifier": "straight",
+                                "exit": 0
+                            },
+                            "intersections": [
+                                {
+                                    "location": [
+                                        13.430405,
+                                        52.524963
+                                    ],
+                                    "bearings": [
+                                        135,
+                                        180,
+                                        345
+                                    ],
+                                    "classes": [],
+                                    "entry": [
+                                        true,
+                                        true,
+                                        false
+                                    ],
+                                    "in": 2,
+                                    "out": 1,
+                                    "lanes": []
+                                }
+                            ],
+                            "rotary_name": null,
+                            "rotary_pronunciation": null,
+                            "driving_side": "right"
+                        },
+                        {
+                            "distance": 76.1,
+                            "duration": 6.9,
+                            "geometry": "mmq_Io~}pA@V?N@rA@dB",
+                            "weight": 6.9,
+                            "name": "Platz der Vereinten Nationen",
+                            "ref": null,
+                            "pronunciation": null,
+                            "mode": "driving",
+                            "maneuver": {
+                                "location": [
+                                    13.429678,
+                                    52.523269
+                                ],
+                                "bearing_before": 184,
+                                "bearing_after": 267,
+                                "type": "continue",
+                                "modifier": "right",
+                                "exit": 0
+                            },
+                            "intersections": [
+                                {
+                                    "location": [
+                                        13.429678,
+                                        52.52327
+                                    ],
+                                    "bearings": [
+                                        0,
+                                        90,
+                                        180,
+                                        270
+                                    ],
+                                    "classes": [],
+                                    "entry": [
+                                        false,
+                                        false,
+                                        true,
+                                        true
+                                    ],
+                                    "in": 0,
+                                    "out": 3,
+                                    "lanes": [
+                                        {
+                                            "indications": [
+                                                "left"
+                                            ],
+                                            "valid": false
+                                        },
+                                        {
+                                            "indications": [
+                                                "straight",
+                                                "left"
+                                            ],
+                                            "valid": false
+                                        },
+                                        {
+                                            "indications": [
+                                                "straight"
+                                            ],
+                                            "valid": false
+                                        },
+                                        {
+                                            "indications": [
+                                                "straight",
+                                                "right"
+                                            ],
+                                            "valid": true
+                                        }
+                                    ]
+                                }
+                            ],
+                            "rotary_name": null,
+                            "rotary_pronunciation": null,
+                            "driving_side": "right"
+                        },
+                        {
+                            "distance": 0,
+                            "duration": 0,
+                            "geometry": "gmq_Imw}pA",
+                            "weight": 0,
+                            "name": "Platz der Vereinten Nationen",
+                            "ref": null,
+                            "pronunciation": null,
+                            "mode": "driving",
+                            "maneuver": {
+                                "location": [
+                                    13.428554,
+                                    52.523239
+                                ],
+                                "bearing_before": 268,
+                                "bearing_after": 0,
+                                "type": "arrive",
+                                "modifier": null,
+                                "exit": 0
+                            },
+                            "intersections": [
+                                {
+                                    "location": [
+                                        13.428554,
+                                        52.52324
+                                    ],
+                                    "bearings": [
+                                        88
+                                    ],
+                                    "classes": [],
+                                    "entry": [
+                                        true
+                                    ],
+                                    "in": 0,
+                                    "out": 0,
+                                    "lanes": []
+                                }
+                            ],
+                            "rotary_name": null,
+                            "rotary_pronunciation": null,
+                            "driving_side": "right"
+                        }
+                    ],
+                    "annotations": null
+                }
+            ]
+        }
+    ],
+    "code": "Ok",
+    "message": null
+}

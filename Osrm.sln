@@ -1,7 +1,7 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
-# Visual Studio Version 16
-VisualStudioVersion = 16.0.30711.63
+# Visual Studio Version 17
+VisualStudioVersion = 17.0.32112.339
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Osrm.HttpApiClient", "src\Osrm.HttpApiClient\Osrm.HttpApiClient.csproj", "{0A16E5D3-A8DD-463C-8656-3AFC0F25EAF9}"
 EndProject
@@ -12,12 +12,6 @@ EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Osrm.IntegrationTests", "test\Osrm.IntegrationTests\Osrm.IntegrationTests.csproj", "{65681146-415C-4AC4-9CE6-98FB626DDA82}"
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Osrm.Benchmarks", "test\Osrm.Benchmarks\Osrm.Benchmarks.csproj", "{A399C565-85D0-43ED-87A0-76622599A17C}"
-EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Osrm.HttpApiClient.Models.Common", "src\Osrm.HttpApiClient.Models.Common\Osrm.HttpApiClient.Models.Common.csproj", "{52BBE396-5B06-4E9B-A436-9C7E797B3049}"
-EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Osrm.HttpApiClient.Models.Requests", "src\Osrm.HttpApiClient.Models.Requests\Osrm.HttpApiClient.Models.Requests.csproj", "{0136A2F1-29AD-4C26-A166-CBFFE6025CC2}"
-EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Osrm.HttpApiClient.Models.Responses", "src\Osrm.HttpApiClient.Models.Responses\Osrm.HttpApiClient.Models.Responses.csproj", "{4CC01BAA-6B8C-41E5-88C2-29D5322ACBBA}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -45,18 +39,6 @@ Global
 		{A399C565-85D0-43ED-87A0-76622599A17C}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{A399C565-85D0-43ED-87A0-76622599A17C}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{A399C565-85D0-43ED-87A0-76622599A17C}.Release|Any CPU.Build.0 = Release|Any CPU
-		{52BBE396-5B06-4E9B-A436-9C7E797B3049}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{52BBE396-5B06-4E9B-A436-9C7E797B3049}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{52BBE396-5B06-4E9B-A436-9C7E797B3049}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{52BBE396-5B06-4E9B-A436-9C7E797B3049}.Release|Any CPU.Build.0 = Release|Any CPU
-		{0136A2F1-29AD-4C26-A166-CBFFE6025CC2}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{0136A2F1-29AD-4C26-A166-CBFFE6025CC2}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{0136A2F1-29AD-4C26-A166-CBFFE6025CC2}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{0136A2F1-29AD-4C26-A166-CBFFE6025CC2}.Release|Any CPU.Build.0 = Release|Any CPU
-		{4CC01BAA-6B8C-41E5-88C2-29D5322ACBBA}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{4CC01BAA-6B8C-41E5-88C2-29D5322ACBBA}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{4CC01BAA-6B8C-41E5-88C2-29D5322ACBBA}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{4CC01BAA-6B8C-41E5-88C2-29D5322ACBBA}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

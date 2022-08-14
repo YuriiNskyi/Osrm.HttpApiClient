@@ -1,17 +1,21 @@
-﻿namespace Osrm.HttpApiClient
+﻿using System.Runtime.CompilerServices;
+
+namespace Osrm.HttpApiClient
 {
     /// <summary>
     /// Fluent way to build Trip requests.
     /// </summary>
     /// <typeparam name="TGeometry">Geometry.</typeparam>
-    public class TripRequestBuilder<TGeometry> : CommonRequestBuilder<TripRequest<TGeometry>, TripRequestBuilder<TGeometry>>
+    public class TripRequestBuilder<TGeometry, TFormat>
+        : CommonRequestBuilder<TripRequest<TGeometry, TFormat>, TripRequestBuilder<TGeometry, TFormat>, TFormat>
         where TGeometry : Geometry
+        where TFormat : struct, IFormat
     {
         /// <summary>
         /// Ctor.
         /// </summary>
         /// <param name="request">Trip request specified by Geometry.</param>
-        public TripRequestBuilder(TripRequest<TGeometry> request)
+        public TripRequestBuilder(TripRequest<TGeometry, TFormat> request)
             : base(request)
         {
         }
@@ -20,7 +24,8 @@
         /// Returns steps in response.
         /// </summary>
         /// <returns>Current builder.</returns>
-        public TripRequestBuilder<TGeometry> ReturnSteps()
+        [MethodImpl(MethodImplOptions.AggressiveInlining)]
+        public TripRequestBuilder<TGeometry, TFormat> ReturnSteps()
         {
             Request.Steps = true;
 
@@ -31,9 +36,10 @@
         /// Returns annotations in response.
         /// </summary>
         /// <returns>Current builder.</returns>
-        public TripRequestBuilder<TGeometry> ReturnAnnotations()
+        [MethodImpl(MethodImplOptions.AggressiveInlining)]
+        public TripRequestBuilder<TGeometry, TFormat> Annotations(RouteAnnotations annotations)
         {
-            Request.Annotations = true;
+            Request.Annotations = annotations;
 
             return this;
         }
@@ -43,7 +49,8 @@
         /// </summary>
         /// <param name="overview">Overview.</param>
         /// <returns>Current builder.</returns>
-        public TripRequestBuilder<TGeometry> Overview(Overview overview)
+        [MethodImpl(MethodImplOptions.AggressiveInlining)]
+        public TripRequestBuilder<TGeometry, TFormat> Overview(Overview overview)
         {
             Request.Overview = overview;
 
@@ -56,7 +63,8 @@
         /// <param name="source">Source.</param>
         /// <param name="destination">Destination.</param>
         /// <returns>Current builder.</returns>
-        public TripRequestBuilder<TGeometry> WithRoundTrip(
+        [MethodImpl(MethodImplOptions.AggressiveInlining)]
+        public TripRequestBuilder<TGeometry, TFormat> WithRoundTrip(
             SourceCoordinate source,
             DestinationCoordinate destination)
         {
@@ -69,7 +77,8 @@
         /// Returned route is NOT a roundtrip (route returns to first location)
         /// </summary>
         /// <returns>Current builder.</returns>
-        public TripRequestBuilder<TGeometry> WithoutRoundtrip()
+        [MethodImpl(MethodImplOptions.AggressiveInlining)]
+        public TripRequestBuilder<TGeometry, TFormat> WithoutRoundtrip()
         {
             Request.WithoutRoundtrip();
 

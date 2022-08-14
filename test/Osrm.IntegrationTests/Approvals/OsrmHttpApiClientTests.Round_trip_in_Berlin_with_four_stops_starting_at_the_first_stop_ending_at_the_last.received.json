@@ -1,0 +1,272 @@
+﻿{
+    "waypoints": [
+        {
+            "trips_index": 0,
+            "waypoint_index": 0,
+            "nodes": [],
+            "name": "Friedrichstra\u00DFe",
+            "location": [
+                13.388798,
+                52.517033
+            ],
+            "distance": 4.231666,
+            "hint": "J4zFiJuMxYgYAAAABQAAAAAAAAAgAAAASjFaQdLNK0AAAAAAsPePQQwAAAADAAAAAAAAABAAAAAe5QAA_kvMAKlYIQM8TMwArVghAwAA7wquu9rw"
+        },
+        {
+            "trips_index": 0,
+            "waypoint_index": 1,
+            "nodes": [],
+            "name": "Torstra\u00DFe",
+            "location": [
+                13.397631,
+                52.529432
+            ],
+            "distance": 2.789393,
+            "hint": "98EhgFMIt4gGAAAACgAAAAAAAAB2AAAAW7-PQOKcyEAAAAAApq6DQgYAAAAKAAAAAAAAAHYAAAAe5QAAf27MABiJIQOCbswA_4ghAwAAXwWuu9rw"
+        },
+        {
+            "trips_index": 0,
+            "waypoint_index": 2,
+            "nodes": [],
+            "name": "Platz der Vereinten Nationen",
+            "location": [
+                13.428554,
+                52.523239
+            ],
+            "distance": 2.226595,
+            "hint": "McAhgP___38fAAAAUQAAACYAAAAeAAAAsowKQkpQX0Lx6yZCvsQGQh8AAABRAAAAJgAAAB4AAAAe5QAASufMAOdwIQNL58wA03AhAwMAvxCuu9rw"
+        },
+        {
+            "trips_index": 0,
+            "waypoint_index": 3,
+            "nodes": [],
+            "name": "",
+            "location": [
+                13.418364,
+                52.523292
+            ],
+            "distance": 15.539673,
+            "hint": "cwe3iP___3_XAAAADQEAADAAAAAPAAAA3dqzQos3skHbKaNB3lbDQNcAAAANAQAAMAAAAA8AAAAe5QAAfL_MABxxIQM7wMwAz3AhAwQAHwKuu9rw"
+        }
+    ],
+    "trips": [
+        {
+            "distance": 8983.5,
+            "duration": 1118.1,
+            "geometry": {
+                "coordinates": [
+                    [
+                        13.388798,
+                        52.517033
+                    ],
+                    [
+                        13.388625,
+                        52.518883
+                    ],
+                    [
+                        13.387885,
+                        52.522526
+                    ],
+                    [
+                        13.387215,
+                        52.527164
+                    ],
+                    [
+                        13.393668,
+                        52.528492
+                    ],
+                    [
+                        13.397631,
+                        52.52943
+                    ],
+                    [
+                        13.403888,
+                        52.529682
+                    ],
+                    [
+                        13.411389,
+                        52.528324
+                    ],
+                    [
+                        13.41432,
+                        52.527508
+                    ],
+                    [
+                        13.415657,
+                        52.52677
+                    ],
+                    [
+                        13.417166,
+                        52.528458
+                    ],
+                    [
+                        13.421348,
+                        52.52873
+                    ],
+                    [
+                        13.424085,
+                        52.528084
+                    ],
+                    [
+                        13.424993,
+                        52.52807
+                    ],
+                    [
+                        13.425184,
+                        52.527885
+                    ],
+                    [
+                        13.427263,
+                        52.527042
+                    ],
+                    [
+                        13.43036,
+                        52.525063
+                    ],
+                    [
+                        13.430413,
+                        52.52479
+                    ],
+                    [
+                        13.429678,
+                        52.52327
+                    ],
+                    [
+                        13.428554,
+                        52.52324
+                    ],
+                    [
+                        13.426375,
+                        52.5232
+                    ],
+                    [
+                        13.425475,
+                        52.52334
+                    ],
+                    [
+                        13.423418,
+                        52.52397
+                    ],
+                    [
+                        13.419817,
+                        52.52539
+                    ],
+                    [
+                        13.416838,
+                        52.52269
+                    ],
+                    [
+                        13.41627,
+                        52.52203
+                    ],
+                    [
+                        13.416523,
+                        52.52188
+                    ],
+                    [
+                        13.417399,
+                        52.52268
+                    ],
+                    [
+                        13.417606,
+                        52.522594
+                    ],
+                    [
+                        13.418364,
+                        52.523293
+                    ],
+                    [
+                        13.418594,
+                        52.523506
+                    ],
+                    [
+                        13.418392,
+                        52.523586
+                    ],
+                    [
+                        13.418667,
+                        52.523888
+                    ],
+                    [
+                        13.420239,
+                        52.52522
+                    ],
+                    [
+                        13.415682,
+                        52.527176
+                    ],
+                    [
+                        13.411596,
+                        52.523785
+                    ],
+                    [
+                        13.409986,
+                        52.52275
+                    ],
+                    [
+                        13.40482,
+                        52.520157
+                    ],
+                    [
+                        13.403043,
+                        52.519108
+                    ],
+                    [
+                        13.401966,
+                        52.518673
+                    ],
+                    [
+                        13.399268,
+                        52.517746
+                    ],
+                    [
+                        13.388779,
+                        52.517155
+                    ],
+                    [
+                        13.388798,
+                        52.517033
+                    ]
+                ]
+            },
+            "weight": 1120.5,
+            "weight_name": "routability",
+            "legs": [
+                {
+                    "distance": 1884.7,
+                    "duration": 251.5,
+                    "weight": 252.7,
+                    "summary": "",
+                    "steps": [],
+                    "annotations": null
+                },
+                {
+                    "distance": 2839.1,
+                    "duration": 363.5,
+                    "weight": 363.5,
+                    "summary": "",
+                    "steps": [],
+                    "annotations": null
+                },
+                {
+                    "distance": 1343.5,
+                    "duration": 163.3,
+                    "weight": 163.3,
+                    "summary": "",
+                    "steps": [],
+                    "annotations": null
+                },
+                {
+                    "distance": 2916.2,
+                    "duration": 339.8,
+                    "weight": 341,
+                    "summary": "",
+                    "steps": [],
+                    "annotations": null
+                }
+            ]
+        }
+    ],
+    "code": "Ok",
+    "message": null
+}

@@ -21,11 +21,11 @@
     <PackageReference Include="NUnit" Version="3.12.0" />
     <PackageReference Include="NUnit3TestAdapter" Version="3.16.1" />
     <PackageReference Include="Microsoft.NET.Test.Sdk" Version="16.5.0" />
+    <PackageReference Include="Osrm.HttpApiClient" Version="1.2.0" />
   </ItemGroup>
 
   <ItemGroup>
     <ProjectReference Include="..\..\src\Osrm.Examples\Osrm.Examples.csproj" />
-    <ProjectReference Include="..\..\src\Osrm.HttpApiClient\Osrm.HttpApiClient.csproj" />
   </ItemGroup>
 
 </Project>
