@@ -17,6 +17,7 @@
     <FileVersion>1.8.0.0</FileVersion>
     <RepositoryUrl>https://github.com/YuriiNskyi/Osrm.HttpApiClient</RepositoryUrl>
     <PackageLicenseUrl>https://github.com/YuriiNskyi/Osrm.HttpApiClient/blob/main/LICENSE</PackageLicenseUrl>
+    <PackageReadmeFile>..\..\README.md</PackageReadmeFile>
   </PropertyGroup>
 
   <ItemGroup>
