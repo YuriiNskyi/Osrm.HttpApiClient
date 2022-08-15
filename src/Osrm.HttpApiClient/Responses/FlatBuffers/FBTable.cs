@@ -38,7 +38,7 @@ namespace Osrm.HttpApiClient
         /// Array of Waypoint objects. Will be null if skip_waypoints will be set to true.
         /// </summary>
         [FlatBufferItem(4)]
-        public virtual Waypoint[]? Destinations { get; set; }
+        public virtual FBWaypoint[]? Destinations { get; set; }
 
         /// <summary>
         /// Array of arrays containing i,j pairs indicating which cells contain estimated values based on fallback_speed.
