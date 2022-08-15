@@ -6,6 +6,9 @@ using System.Threading.Tasks;
 
 namespace Osrm.HttpApiClient
 {
+    /// <summary>
+    /// Special OSRM client for FlatBuffers format.
+    /// </summary>
     public class OsrmFlatBuffersHttpApiClient
     {
         private readonly HttpClient _httpClient;

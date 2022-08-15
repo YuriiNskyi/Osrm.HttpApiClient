@@ -6,6 +6,9 @@ using FlatSharp;
 
 namespace Osrm.HttpApiClient
 {
+    /// <summary>
+    /// Special static OSRM client for FlatBuffers format.
+    /// </summary>
     public static class OsrmFlatBuffersStaticHttpApiClient
     {
         /// <summary>

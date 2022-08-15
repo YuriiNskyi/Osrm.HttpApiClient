@@ -12,12 +12,14 @@
     <Description>Simple HTTP API client for OSRM server. Supports FlatBuffers as well.</Description>
     <PackageTags>C#, OSRM, REST, API, HTTP, Client</PackageTags>
     <PackageProjectUrl>https://github.com/YuriiNskyi/Osrm.HttpApiClient</PackageProjectUrl>
-    <Version>1.8.0.0</Version>
-    <AssemblyVersion>1.8.0.0</AssemblyVersion>
-    <FileVersion>1.8.0.0</FileVersion>
+    <Version>1.9.0.0</Version>
+    <AssemblyVersion>1.9.0.0</AssemblyVersion>
+    <FileVersion>1.9.0.0</FileVersion>
     <RepositoryUrl>https://github.com/YuriiNskyi/Osrm.HttpApiClient</RepositoryUrl>
     <PackageLicenseUrl>https://github.com/YuriiNskyi/Osrm.HttpApiClient/blob/main/LICENSE</PackageLicenseUrl>
     <PackageReadmeFile>README.md</PackageReadmeFile>
+    <GenerateDocumentationFile>True</GenerateDocumentationFile>
+    <DocumentationFile></DocumentationFile>
   </PropertyGroup>
 
   <ItemGroup>
