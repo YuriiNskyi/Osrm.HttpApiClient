@@ -19,7 +19,7 @@ namespace Osrm.HttpApiClient
         /// The estimated travel time, in float number of seconds.
         /// </summary>
         [FlatBufferItem(1)]
-        public virtual double Duratiion { get; set; }
+        public virtual double Duration { get; set; }
 
         /// <summary>
         /// The calculated weight of the route leg.
