@@ -43,7 +43,7 @@ namespace Osrm.HttpApiClient
         /// <summary>
         /// Additional details about each coordinate along the route geometry:
         /// </summary>
-        [JsonPropertyName("annotations")]
-        public RouteLegAnnotation Annotations { get; set; } = null!;
+        [JsonPropertyName("annotation")]
+        public RouteLegAnnotation Annotation { get; set; } = null!;
     }
 }
