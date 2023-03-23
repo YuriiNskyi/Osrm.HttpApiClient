@@ -11,6 +11,6 @@ namespace Osrm.HttpApiClient
 
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
         internal static string InvariantCulture(this double number)
-            => number.ToString(CultureInfo.InvariantCulture);
+            => number.ToString(".0###############", CultureInfo.InvariantCulture);
     }
 }
