@@ -1,4 +1,5 @@
-﻿using System.Runtime.CompilerServices;
+﻿using System.Net;
+using System.Runtime.CompilerServices;
 
 namespace Osrm.HttpApiClient
 {
@@ -12,5 +13,8 @@ namespace Osrm.HttpApiClient
             => string.IsNullOrWhiteSpace(baseAddress)
                 ? request.Uri
                 : baseAddress.TrimEnd(Slash) + Slash + request.Uri;
+
+        public static bool IsSuccessResponseStatusCode(HttpStatusCode httpStatusCode)
+            => httpStatusCode is HttpStatusCode.OK or HttpStatusCode.BadRequest;
     }
 }

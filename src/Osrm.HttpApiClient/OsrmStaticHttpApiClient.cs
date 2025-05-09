@@ -29,7 +29,7 @@ namespace Osrm.HttpApiClient
         /// <param name="cancellationToken">Cancellation token.</param>
         /// <returns>Nearest response.</returns>
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
-        public static Task<NearestResponse> GetNearestAsync(
+        public static Task<OsrmHttpApiResponse<NearestResponse>> GetNearestAsync(
             string? baseAddress,
             HttpClient httpClient,
             NearestRequest<JsonFormat> request,
@@ -53,7 +53,7 @@ namespace Osrm.HttpApiClient
         /// <param name="cancellationToken">Cancellation token.</param>
         /// <returns>Route response specified by Geometry.</returns>
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
-        public static Task<RouteResponse<TGeometry>> GetRouteAsync<TGeometry>(
+        public static Task<OsrmHttpApiResponse<RouteResponse<TGeometry>>> GetRouteAsync<TGeometry>(
             string? baseAddress,
             HttpClient httpClient,
             RouteRequest<TGeometry, JsonFormat> request,
@@ -77,7 +77,7 @@ namespace Osrm.HttpApiClient
         /// <param name="cancellationToken">Cancellation token.</param>
         /// <returns>Table response.</returns>
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
-        public static Task<TableResponse> GetTableAsync(
+        public static Task<OsrmHttpApiResponse<TableResponse>> GetTableAsync(
             string? baseAddress,
             HttpClient httpClient,
             TableRequest<JsonFormat> request,
@@ -101,7 +101,7 @@ namespace Osrm.HttpApiClient
         /// <param name="cancellationToken">Cancellation token.</param>
         /// <returns>Match response specified by Geometry.</returns>
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
-        public static Task<MatchResponse<TGeometry>> GetMatchAsync<TGeometry>(
+        public static Task<OsrmHttpApiResponse<MatchResponse<TGeometry>>> GetMatchAsync<TGeometry>(
             string? baseAddress,
             HttpClient httpClient,
             MatchRequest<TGeometry, JsonFormat> request,
@@ -126,7 +126,7 @@ namespace Osrm.HttpApiClient
         /// <param name="cancellationToken">Cancellation token.</param>
         /// <returns>Trip response specified by Geometry.</returns>
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
-        public static Task<TripResponse<TGeometry>> GetTripAsync<TGeometry>(
+        public static Task<OsrmHttpApiResponse<TripResponse<TGeometry>>> GetTripAsync<TGeometry>(
             string? baseAddress,
             HttpClient httpClient,
             TripRequest<TGeometry, JsonFormat> request,
@@ -148,7 +148,7 @@ namespace Osrm.HttpApiClient
         /// <param name="request">Tile request.</param>
         /// <param name="cancellationToken">Cancellation token.</param>
         /// <returns>Tile response.</returns>
-        public static async Task<TileResponse> GetTileAsync(
+        public static async Task<OsrmHttpApiResponse<TileResponse>> GetTileAsync(
             string? baseAddress,
             HttpClient httpClient,
             TileRequest request,
@@ -158,12 +158,21 @@ namespace Osrm.HttpApiClient
 
             var responseMessage = await httpClient.GetAsync(requestUri, cancellationToken).ConfigureAwait(false);
 
-            var vectorTile = await responseMessage.Content.ReadAsByteArrayAsync(cancellationToken).ConfigureAwait(false);
+            var statusCode = responseMessage.StatusCode;
 
-            var response = new TileResponse
-            {
-                VectorTile = vectorTile
-            };
+            var isSuccess = OsrmBaseStaticHttpApiClient.IsSuccessResponseStatusCode(statusCode);
+
+            var result = isSuccess
+                ? new TileResponse
+                {
+                    VectorTile = await responseMessage.Content.ReadAsByteArrayAsync(cancellationToken).ConfigureAwait(false),
+                }
+                : null;
+
+            var response = new OsrmHttpApiResponse<TileResponse>(
+                isSuccess,
+                statusCode,
+                result);
 
             return response;
         }
@@ -179,7 +188,7 @@ namespace Osrm.HttpApiClient
         /// <param name="jsonSerializerOptions">JSON serializer options for response.</param>
         /// <param name="cancellationToken">Cancellation token.</param>
         /// <returns>Common response.</returns>
-        public static async Task<TResponse> MakeRequestAsync<TRequest, TResponse>(
+        public static async Task<OsrmHttpApiResponse<TResponse>> MakeRequestAsync<TRequest, TResponse>(
             string? baseAddress,
             HttpClient httpClient,
             TRequest request,
@@ -192,7 +201,18 @@ namespace Osrm.HttpApiClient
 
             var responseMessage = await httpClient.GetAsync(requestUri, cancellationToken).ConfigureAwait(false);
 
-            var response = await Deserialize<TResponse>(responseMessage, jsonSerializerOptions, cancellationToken).ConfigureAwait(false);
+            var statusCode = responseMessage.StatusCode;
+
+            var isSuccess = OsrmBaseStaticHttpApiClient.IsSuccessResponseStatusCode(statusCode);
+
+            var result = isSuccess
+                ? await Deserialize<TResponse>(responseMessage, jsonSerializerOptions, cancellationToken).ConfigureAwait(false)
+                : null;
+
+            var response = new OsrmHttpApiResponse<TResponse>(
+                isSuccess,
+                statusCode,
+                result);
 
             return response!;
         }

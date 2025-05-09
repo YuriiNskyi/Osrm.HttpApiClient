@@ -29,7 +29,7 @@ namespace Osrm.HttpApiClient
         /// <param name="cancellationToken">Cancellation token.</param>
         /// <returns>Nearest response.</returns>
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
-        public Task<FBResult> GetNearestAsync(
+        public Task<OsrmHttpApiResponse<FBResult>> GetNearestAsync(
             NearestRequest<FlatBuffersFormat> request,
             CancellationToken cancellationToken = default)
             => OsrmFlatBuffersStaticHttpApiClient.GetNearestAsync(
@@ -46,7 +46,7 @@ namespace Osrm.HttpApiClient
         /// <param name="cancellationToken">Cancellation token.</param>
         /// <returns>Route response specified by Geometry.</returns>
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
-        public Task<FBResult> GetRouteAsync<TGeometry>(
+        public Task<OsrmHttpApiResponse<FBResult>> GetRouteAsync<TGeometry>(
             RouteRequest<TGeometry, FlatBuffersFormat> request,
             CancellationToken cancellationToken = default)
             where TGeometry : Geometry
@@ -63,7 +63,7 @@ namespace Osrm.HttpApiClient
         /// <param name="cancellationToken">Cancellation token.</param>
         /// <returns>Table response.</returns>
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
-        public Task<FBResult> GetTableAsync(
+        public Task<OsrmHttpApiResponse<FBResult>> GetTableAsync(
             TableRequest<FlatBuffersFormat> request,
             CancellationToken cancellationToken = default)
             => OsrmFlatBuffersStaticHttpApiClient.GetTableAsync(
@@ -80,7 +80,7 @@ namespace Osrm.HttpApiClient
         /// <param name="cancellationToken">Cancellation token.</param>
         /// <returns>Match response specified by Geometry.</returns>
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
-        public Task<FBResult> GetMatchAsync<TGeometry>(
+        public Task<OsrmHttpApiResponse<FBResult>> GetMatchAsync<TGeometry>(
             MatchRequest<TGeometry, FlatBuffersFormat> request,
             CancellationToken cancellationToken = default)
             where TGeometry : Geometry
@@ -98,7 +98,7 @@ namespace Osrm.HttpApiClient
         /// <param name="cancellationToken">Cancellation token.</param>
         /// <returns>Trip response specified by Geometry.</returns>
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
-        public Task<FBResult> GetTripAsync<TGeometry>(
+        public Task<OsrmHttpApiResponse<FBResult>> GetTripAsync<TGeometry>(
             TripRequest<TGeometry, FlatBuffersFormat> request,
             CancellationToken cancellationToken = default)
             where TGeometry : Geometry

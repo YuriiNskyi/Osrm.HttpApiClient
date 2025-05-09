@@ -20,7 +20,7 @@ namespace Osrm.HttpApiClient
         /// <param name="cancellationToken">Cancellation token.</param>
         /// <returns>Nearest response.</returns>
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
-        public static Task<FBResult> GetNearestAsync(
+        public static Task<OsrmHttpApiResponse<FBResult>> GetNearestAsync(
             string? baseAddress,
             HttpClient httpClient,
             NearestRequest<FlatBuffersFormat> request,
@@ -41,7 +41,7 @@ namespace Osrm.HttpApiClient
         /// <param name="cancellationToken">Cancellation token.</param>
         /// <returns>Route response specified by Geometry.</returns>
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
-        public static Task<FBResult> GetRouteAsync<TGeometry>(
+        public static Task<OsrmHttpApiResponse<FBResult>> GetRouteAsync<TGeometry>(
             string? baseAddress,
             HttpClient httpClient,
             RouteRequest<TGeometry, FlatBuffersFormat> request,
@@ -62,7 +62,7 @@ namespace Osrm.HttpApiClient
         /// <param name="cancellationToken">Cancellation token.</param>
         /// <returns>Table response.</returns>
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
-        public static Task<FBResult> GetTableAsync(
+        public static Task<OsrmHttpApiResponse<FBResult>> GetTableAsync(
             string? baseAddress,
             HttpClient httpClient,
             TableRequest<FlatBuffersFormat> request,
@@ -83,7 +83,7 @@ namespace Osrm.HttpApiClient
         /// <param name="cancellationToken">Cancellation token.</param>
         /// <returns>Match response specified by Geometry.</returns>
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
-        public static Task<FBResult> GetMatchAsync<TGeometry>(
+        public static Task<OsrmHttpApiResponse<FBResult>> GetMatchAsync<TGeometry>(
             string? baseAddress,
             HttpClient httpClient,
             MatchRequest<TGeometry, FlatBuffersFormat> request,
@@ -105,7 +105,7 @@ namespace Osrm.HttpApiClient
         /// <param name="cancellationToken">Cancellation token.</param>
         /// <returns>Trip response specified by Geometry.</returns>
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
-        public static Task<FBResult> GetTripAsync<TGeometry>(
+        public static Task<OsrmHttpApiResponse<FBResult>> GetTripAsync<TGeometry>(
             string? baseAddress,
             HttpClient httpClient,
             TripRequest<TGeometry, FlatBuffersFormat> request,
@@ -121,13 +121,12 @@ namespace Osrm.HttpApiClient
         /// A general way to make requests.
         /// </summary>
         /// <typeparam name="TRequest">Common request.</typeparam>
-        /// <typeparam name="TResponse">Common response.</typeparam>
         /// <param name="baseAddress">Base address for the OSRM backend.</param>
         /// <param name="httpClient">Http client which is responsible for sending actual request.</param>
         /// <param name="request">Common reqeust.</param>
         /// <param name="cancellationToken">Cancellation token.</param>
         /// <returns>Common response.</returns>
-        public static async Task<FBResult> MakeRequestAsync<TRequest>(
+        public static async Task<OsrmHttpApiResponse<FBResult>> MakeRequestAsync<TRequest>(
             string? baseAddress,
             HttpClient httpClient,
             TRequest request,
@@ -138,7 +137,18 @@ namespace Osrm.HttpApiClient
 
             var responseMessage = await httpClient.GetAsync(requestUri, cancellationToken).ConfigureAwait(false);
 
-            var response = await Deserialize(responseMessage, cancellationToken).ConfigureAwait(false);
+            var statusCode = responseMessage.StatusCode;
+
+            var isSuccess = OsrmBaseStaticHttpApiClient.IsSuccessResponseStatusCode(statusCode);
+
+            var result = isSuccess
+                ? await Deserialize(responseMessage, cancellationToken).ConfigureAwait(false)
+                : null;
+
+            var response = new OsrmHttpApiResponse<FBResult>(
+                isSuccess,
+                statusCode,
+                result);
 
             return response!;
         }
